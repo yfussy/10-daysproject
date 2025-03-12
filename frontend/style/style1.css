@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #FFDCD4;
+}
+
+.DesktopClock {
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+    background: #FFDCD4;
+    overflow: hidden;
+}
+
+.Rectangle2 {
+    width: 1440px;
+    height: 831px;
+    position: absolute;
+    top: 116px;
+    background: white;
+}
+
+.Rectangle1 {
+    position: absolute;
+    top: 116px;
+}
+
+.Home {
+    width: 74px;
+    height: 23px;
+    position: absolute;
+    top: 143px;
+    left: 51px;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+.Rectangle3, .Rectangle4 {
+    position: absolute;
+    top: 116px;
+}
+
+.Rectangle3 {
+    left: 478px;
+}
+
+.Rectangle4 {
+    left: 701px;
+}
+
+.Horoscope {
+    width: 148px;
+    height: 35px;
+    position: absolute;
+    top: 142px;
+    left: 808px;
+    font-size: 24px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+.Calendar {
+    width: 127px;
+    height: 35px;
+    position: absolute;
+    top: 142px;
+    left: 263px;
+    font-size: 24px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+.Clock {
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    top: 142px;
+    left: 550px;
+    font-size: 24px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+.Ellipse1 {
+    width: 64px;
+    height: 64px;
+    background: #D9D9D9;
+    border-radius: 50%;
+    position: absolute;
+    top: 128px;
+    left: 1350px;
+}
+
+.Date {
+    width: 76px;
+    height: 35px;
+    position: absolute;
+    top: 253px;
+    left: 87px;
+    font-size: 24px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+.Rectangle7 {
+    width: 152px;
+    height: 48px;
+    position: absolute;
+    top: 247px;
+    left: 212px;
+    background: #F5F5F5;
+}
+
+.Sunday {
+    width: 93px;
+    height: 35px;
+    position: absolute;
+    top: 253px;
+    left: 241px;
+    font-size: 24px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+.Rectangle9 {
+    width: 670px;
+    height: 542px;
+    position: absolute;
+    top: 329px;
+    left: 728px;
+    background: #D9D9D9;
+    border-radius: 30px;
+}
+
+.Ellipse2, .Ellipse3 {
+    width: 180px;
+    height: 180px;
+    background: #D9D9D9;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.Ellipse2 {
+    top: 361px;
+    left: 134px;
+}
+
+.Ellipse3 {
+    top: 361px;
+    left: 410px;
+}
+
+.RecommendedTime {
+    position: absolute;
+    top: 582px;
+    left: 67px;
+    font-size: 24px;
+    color: black;
+}
+
+.Rectangle10, .Rectangle13, .Rectangle14, .Rectangle15, .Rectangle11, .Rectangle12 {
+    width: 100px;
+    height: 100px;
+    background: #D9D9D9;
+    border-radius: 30px;
+    position: absolute;
+}
+
+.Rectangle10 {
+    top: 641px;
+    left: 127px;
+}
+
+.Rectangle13 {
+    top: 771px;
+    left: 126px;
+}
+
+.Rectangle14 {
+    top: 771px;
+    left: 315px;
+}
+
+.Rectangle15 {
+    top: 771px;
+    left: 501px;
+}
+
+.Rectangle11 {
+    top: 641px;
+    left: 315px;
+}
+
+.Rectangle12 {
+    top: 641px;
+    left: 501px;
+}
+
+.Hr30Mins, .Hr {
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: black;
+    position: absolute;
+}
+
+.Hr30Mins {
+    width: 100px;
+}
+
+.Hr {
+    width: 80px;
+}
+
+.Hr30Mins:nth-child(1) {
+    top: 670px;
+    left: 147px;
+}
+
+.Hr:nth-child(2) {
+    top: 681px;
+    left: 349px;
+}
+
+.Hr30Mins:nth-child(3) {
+    top: 670px;
+    left: 520px;
+}
+
+.Hr:nth-child(4) {
+    top: 811px;
+    left: 161px;
+}
+
+.Hr30Mins:nth-child(5) {
+    top: 802px;
+    left: 334px;
+}
+
+.Hr:nth-child(6) {
+    top: 811px;
+    left: 536px;
+}
+
+.WakeUpAt, .Now {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    position: absolute;
+}
+
+.WakeUpAt {
+    top: 329px;
+    left: 441px;
+}
+
+.Now {
+    top: 329px;
+    left: 199px;
+}
+
+.DayPlan {
+    font-size: 32px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: 361px;
+    left: 762px;
+}

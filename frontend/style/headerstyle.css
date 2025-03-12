@@ -1,0 +1,58 @@
+.HomeButton-style{
+    width: 176px;
+    height: 78px; 
+    left: 0px; 
+    top: 0px;
+    position: absolute;
+    color: black; 
+    font-size: 24px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    border: none;
+    word-wrap: break-word
+}
+.CalendarButton-style{
+    width: 302px;
+    height: 78px; 
+    left: 176px; 
+    top: 0px;
+    position: absolute;
+    color: black; 
+    font-size: 24px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    border: none;
+    word-wrap: break-word
+}
+.ClockButton-style{
+    width: 223px;
+    height: 78px; 
+    left: 478px; 
+    top: 0px;
+    position: absolute;
+    color: black; 
+    font-size: 24px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    border: none;
+    word-wrap: break-word
+}
+.HoroscopeButton-style{
+    width: 361px;
+    height: 78px; 
+    left: 701px; 
+    top: 0px;
+    position: absolute;
+    color: black; 
+    font-size: 24px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    border: none;
+    word-wrap: break-word
+}
+.HomeButton-style:hover,
+.CalendarButton-style:hover,
+.ClockButton-style:hover,
+.HoroscopeButton-style:hover{
+    background-color: #D9D9D9;
+}
