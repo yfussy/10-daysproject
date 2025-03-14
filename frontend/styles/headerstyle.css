@@ -63,124 +63,53 @@
     height: 40px;
     color: #AC3030;
 }*/
-/* Header-style */
-.Header-style {
-    position: absolute;
-    width: 100vw; /* 100% of viewport width */
-    height: 9.77vh; /* Height based on original 100px / 1024px */
+.Header-style{
+    position: fixed;
+    width: 100%;
+    height: 100px;
     top: 0;
+    left: 0;
     background-color: #FFF2D8;
     border: none;
     background-size: cover;
-    
-    /* Flexbox properties to center the text */
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    text-align: center; /* Ensure text is centered */
+    z-index: 1000;
 }
 
-/* Home Button (position: 181px, top: 30px, font-size: 28px) */
+.HomeButton-style, .CalendarButton-style, .ClockButton-style, .HoroscopeButton-style {
+    color: black; 
+    top: 30px;
+    position: absolute;
+    font-size: 28px; 
+    font-family: Jost; 
+    font-weight: 600; 
+    word-wrap: break-word;
+    border: none;
+    background: none;
+    z-index: 1001;
+}
+
 .HomeButton-style {
-    color: black;
-    position: absolute;
-    top: 2.93vh; /* 30px / 1024px */
-    left: 12.57vw; /* 181px / 1440px */
-    font-size: 1.94vw; /* 28px / 1440px */
-    font-family: Jost;
-    font-weight: 600;
-    word-wrap: break-word;
-    border: none;
-    background: none;
+    left: 12.57%;
 }
 
-/* Calendar Button (position: 518px, top: 30px, font-size: 28px) */
 .CalendarButton-style {
-    color: black;
-    position: absolute;
-    top: 2.93vh; /* 30px / 1024px */
-    left: 35.97vw; /* 518px / 1440px */
-    font-size: 1.94vw; /* 28px / 1440px */
-    font-family: Jost;
-    font-weight: 600;
-    word-wrap: break-word;
-    border: none;
-    background: none;
+    left: 35.97%;
 }
 
-/* Clock Button (position: 744px, top: 30px, font-size: 28px) */
 .ClockButton-style {
-    color: black;
-    position: absolute;
-    top: 2.93vh; /* 30px / 1024px */
-    left: 51.67vw; /* 744px / 1440px */
-    font-size: 1.94vw; /* 28px / 1440px */
-    font-family: Jost;
-    font-weight: 600;
-    word-wrap: break-word;
-    border: none;
-    background: none;
+    left: 51.67%;
 }
 
-/* Horoscope Button (position: 915px, top: 30px, font-size: 28px) */
 .HoroscopeButton-style {
-    color: black;
-    position: absolute;
-    top: 2.93vh; /* 30px / 1024px */
-    left: 63.54vw; /* 915px / 1440px */
-    font-size: 1.94vw; /* 28px / 1440px */
-    font-family: Jost;
-    font-weight: 600;
-    word-wrap: break-word;
-    border: none;
-    background: none;
+    left: 63.46%;
 }
 
-/* Button Hover Effects */
 .HomeButton-style:hover,
 .CalendarButton-style:hover,
 .ClockButton-style:hover,
 .HoroscopeButton-style:hover {
-    width: auto;
-    height: 5vh; /* Height on hover based on viewport height */
+    width: fit-content;
+    height: 40px;
     color: #AC3030;
-    font-size: 2.2vw; /* Slightly larger font size on hover */
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-    /* Adjustments for medium-sized screens */
-    .HomeButton-style, .CalendarButton-style, .ClockButton-style, .HoroscopeButton-style {
-        font-size: 2.5vw; /* Slightly larger font size on smaller screens */
-        top: 5vh; /* Adjust vertical positioning for smaller screens */
-    }
-
-    .Header-style {
-        height: 12vh; /* Adjust header height for smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    /* Stack the buttons vertically on smaller screens */
-    .HomeButton-style, .CalendarButton-style, .ClockButton-style, .HoroscopeButton-style {
-        left: 50%; /* Center buttons horizontally */
-        transform: translateX(-50%); /* Adjust the horizontal centering */
-        top: 10vh; /* Vertical margin between buttons */
-    }
-
-    .Header-style {
-        height: 15vh; /* Adjust header height for mobile screens */
-    }
-}
-
-@media (max-width: 480px) {
-    /* For very small screens */
-    .HomeButton-style, .CalendarButton-style, .ClockButton-style, .HoroscopeButton-style {
-        font-size: 4vw; /* Larger font size for very small screens */
-        top: 12vh; /* Increased vertical space between buttons */
-    }
-
-    .Header-style {
-        height: 20vh; /* Adjust header height for very small screens */
-    }
-}
