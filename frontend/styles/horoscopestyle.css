@@ -1,0 +1,41 @@
+object{
+    width: 100vw;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    border:none;
+}
+.roulettebg{
+    position: absolute;
+    width: 569px;
+    height: 570.45px;
+    z-index: 0;
+    background-color: #FFF2D8;
+    border-radius: 50%;
+    left: 435px;
+    top: 227px;
+
+}
+.roulettepic{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+}
+.spinbutton-style{
+    width: 176.7px;
+    height: 64px;
+    border-radius: 13px;
+    border: none;
+    background-color: #AC3030;
+    position: absolute;
+    left: 632px;
+    top: 852px;
+}
+.spin-style{
+    color:#FFF2D8;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 39px;
+}

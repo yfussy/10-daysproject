@@ -1,0 +1,93 @@
+object{
+    width: 100vw;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    border:none;
+}
+.Myaccount-style {
+    position: absolute; 
+    top: 179px;
+    left: 593px;
+    font-family: 'Encode Sans SC', sans-serif; 
+    font-size: 64px;  
+    font-weight: bold;  
+}
+
+  .Myaccount-bg {
+    position: absolute;
+    width: 235px; 
+    height: 241px; 
+    background-color: #AC3030; 
+    border-radius: 50%;
+    left: 175px;
+    top: 168px;
+    z-index: 0;
+  }
+  
+  .Myaccount-pics {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 1; 
+  }
+  .editprof-style{
+    position: absolute;
+    left: 223px;
+    top: 420px;
+    font-family: Jost;
+    color: black;
+    font-size: 28px;
+    font-weight: 600;
+  }
+.Edit-pics{
+    position: absolute;
+    width: auto;
+    height: 53px;
+    left: 1010px;
+    top: 192px;
+    border: none;
+}
+.username-style{
+    position: absolute;
+    left: 631px;
+    top: 293px;
+    font-family: Jost;
+    font-size: 28px;
+    font-weight: 600;
+}
+.email-style{
+    position: absolute;
+    left: 631px;
+    top: 364px;
+    font-family: Jost;
+    font-size: 28px;
+    font-weight: 600;
+}
+.History-pics{
+    position: absolute;
+    left: 87px;
+    top: 546px;
+    width: 59px;
+    height:59px;
+    border: none;
+}
+.History-style{
+    position: absolute;
+    left: 167px;
+    top: 533px;
+    font-family: Encode Sans SC;
+    font-size: 64px;
+    font-weight: bold;
+}
+.hisback-style{
+    position: absolute;
+    top:633px;
+    left: 89px;
+    width: 1261px; 
+    height: 294px; 
+    background: #FFF2D8; 
+    border-radius: 20px
+}
