@@ -1,4 +1,4 @@
-class Profile {
+export class Profile {
     age;
     birthDate;
     horoNum;

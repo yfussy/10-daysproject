@@ -1,6 +1,6 @@
 import { deltaTime } from "../frontend/scripts/utils/timeManager.js";
 
-class Clock {
+export class Clock {
     day;
     sleepTime;
     sleepDuration;
