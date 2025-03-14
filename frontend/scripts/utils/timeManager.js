@@ -6,11 +6,12 @@ export function getFormattedHours(totalMins) {
     return `${hr}:${min.toString().padStart(2, '0')}`;
 }
 
-export function addTime(hm, minAdd) {
+export function deltaTime(hm, minAdd) {
     const [hr,min] = hm.split(':').map(Number);
 
-    let totalMins = hr * 60 + min;
+    let totalMins = hr * 60 + min + minAdd;
 
-    totalMins = (totalMins + minAdd) % (24 * 60);
+    totalMins = (totalMins + (24 * 60)) % (24 * 60);
+
     return getFormattedHours(totalMins);
 }
