@@ -20,7 +20,7 @@
     background: none;
 }
 .CalendarButton-style{
-    color: #AC3030; 
+    color: black; 
     top: 35px;
     left: 518px;
     position: absolute;
@@ -32,7 +32,7 @@
     background: none;
 }
 .ClockButton-style{
-    color: #AC3030; 
+    color: black; 
     top: 35px;
     left: 744px;
     position: absolute;
@@ -44,7 +44,7 @@
     background: none;
 }
 .HoroscopeButton-style{
-    color: #AC3030; 
+    color: black; 
     top: 35px;
     left: 915px;
     position: absolute;
@@ -61,5 +61,5 @@
 .HoroscopeButton-style:hover{
     width: fit-content;
     height: 40px;
-    color: black;
+    color: #AC3030;
 }
