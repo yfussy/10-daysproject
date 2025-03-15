@@ -20,7 +20,13 @@ Follow [contribution guidelines](/CONTRIBUTING.md) for this project
 &nbsp;&nbsp;&nbsp;&nbsp;|--  index.html
 
 **backend/**\
-&nbsp;&nbsp;&nbsp;&nbsp;|--  server.js\
+&nbsp;&nbsp;&nbsp;&nbsp;|--  controllers/\
+&nbsp;&nbsp;&nbsp;&nbsp;|--  middlewares/\
+&nbsp;&nbsp;&nbsp;&nbsp;|--  models/\
+&nbsp;&nbsp;&nbsp;&nbsp;|--  routes/\
+&nbsp;&nbsp;&nbsp;&nbsp;|--  index.js\
+&nbsp;&nbsp;&nbsp;&nbsp;|--  package-lock.json\
 &nbsp;&nbsp;&nbsp;&nbsp;|--  package.json\
-&nbsp;&nbsp;&nbsp;&nbsp;|--  .env
+&nbsp;&nbsp;&nbsp;&nbsp;|--  .env (local)\
+&nbsp;&nbsp;&nbsp;&nbsp;|--  node_modules (local)
 
