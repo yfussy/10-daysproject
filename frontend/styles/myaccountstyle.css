@@ -37,7 +37,7 @@ object{
     position: absolute;
     left: 223px;
     top: 420px;
-    font-family: Jost;
+    font-family: 'Jost';
     color: black;
     font-size: 28px;
     font-weight: 600;
@@ -54,7 +54,7 @@ object{
     position: absolute;
     left: 631px;
     top: 293px;
-    font-family: Jost;
+    font-family: 'Jost';
     font-size: 28px;
     font-weight: 600;
 }
@@ -62,7 +62,7 @@ object{
     position: absolute;
     left: 631px;
     top: 364px;
-    font-family: Jost;
+    font-family: 'Jost';
     font-size: 28px;
     font-weight: 600;
 }
@@ -78,7 +78,7 @@ object{
     position: absolute;
     left: 167px;
     top: 533px;
-    font-family: Encode Sans SC;
+    font-family: 'Encode Sans SC';
     font-size: 64px;
     font-weight: bold;
 }
