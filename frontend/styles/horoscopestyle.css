@@ -5,16 +5,25 @@ object{
     left: 0px;
     border:none;
 }
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 500px;
+    margin: 150px auto;
+    text-align: center;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically if needed */
+}
 .roulettebg{
-    position: absolute;
-    width: 569px;
-    height: 570.45px;
-    z-index: 0;
-    background-color: #FFF2D8;
-    border-radius: 50%;
-    left: 435px;
-    top: 227px;
-
+    padding: 5px;
 }
 .roulettepic{
     position: relative;
@@ -24,18 +33,18 @@ object{
     object-fit: cover;
 }
 .spinbutton-style{
+    justify-items: center;
     width: 176.7px;
     height: 64px;
     border-radius: 13px;
     border: none;
     background-color: #AC3030;
-    position: absolute;
-    left: 632px;
-    top: 852px;
-}
-.spin-style{
+    cursor: pointer;
     color:#FFF2D8;
     font-family: Jost;
     font-weight: 600;
     font-size: 39px;
+}
+.spinbutton-style:hover {
+    background-color: #942727;
 }
