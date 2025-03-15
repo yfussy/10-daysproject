@@ -1,34 +1,46 @@
+.main{
+    margin-top: 100px ;
+    padding: 50px;
+}
 .welcome-style{
-    position: absolute;
-    left: 43vw;
-    top: 173px;
+    display: flex;
+    justify-content: center;
     font-family: Jost;
     font-size: 40px;
     font-weight: bold;
 }
 .shleep-style{
+    display: flex;
+    justify-content: center;
     font-family: Jost;
     font-size: 72px;
     font-weight: bold;
-    position: absolute;
-    left: 41.75vw;
-    top: 235px;
 }
-.calendarbox-style{
+/*.box-style{
     width: 362px;
     height: 354px;
     border-radius: 30px;
-    left: 87px;
-    top: 408px;
     background-color: #FFF2D8;
-    position: absolute;
-    left: 87px;
-    top: 408px;
+    margin-top: 50px;
+}*/
+.pic{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 171px;
+    height: auto;
+
 }
-.calendar-pic{
-    height: 171px;
-    width: auto;
-    position: absolute;
-    left: 184px;
-    top: 538px;
+.button{
+    background-color: #AC3030;
+    color: #FFF2D8;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    border-radius: 15px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+}
+.box-style{
+    
 }
