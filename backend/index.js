@@ -5,9 +5,12 @@ require('dotenv').config();
 
 const app = express();
 
-
+// middlewares
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+
+// routes
+app.use('/api/user', userRoute);
 
 app.get('/', (req, res) => {
     res.send("Hello from Node API Server");
