@@ -40,6 +40,21 @@ app.post('/api/users', async (req, res) => {
     }
 });
 
+app.put('/api/user/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const user = await User.findByIdAndUpdate(id, req.body);
+        if (!user) {
+            return res.status(404).json({message: "User not found"});
+        }
+
+        const updatedUser = await User.findById(id);
+        res.status(200).json(updatedUser);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+});
+
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     console.log("Connected to database!");
