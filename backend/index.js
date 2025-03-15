@@ -1,8 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const User = require('./models/user.model.js')
+const userRoute = require('./routes/user.route.js')
+const app = express();
 require('dotenv').config();
 
-const app = express();
+// middlewares
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
+// routes
+app.use('/api/users', userRoute);
 
 
 app.get('/', (req, res) => {
