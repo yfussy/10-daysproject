@@ -9,7 +9,7 @@ const app = express();
 
 // CORS config
 app.use(cors({
-    origin: 'http://127.0.0.1:5500/', // replace with github url after deploy
+    origin: 'http://127.0.0.1:5500', // replace with github url after deploy
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
