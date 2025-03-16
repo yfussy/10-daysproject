@@ -110,7 +110,7 @@ const getClockLogsByMonth = async (req, res) => {
 
     try {
         const user = await User.findById(userId);
-        const logs = user.clockLogs.filter(log => log.date.startWith(month));
+        const logs = user.clockLogs.filter(log => log.date.startsWith(month));
 
         res.status(200).json(logs);
     } catch (error) {
