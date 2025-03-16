@@ -1,10 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const User = require('./models/user.model.js')
-const userRoute = require('./routes/user.route.js')
-const clockRoute = require('./routes/clocklog.route.js')
-const app = express();
+const userRoute = require('./routes/user.route.js');
+const clockRoute = require('./routes/clocklog.route.js');
 require('dotenv').config();
+
+const app = express();
 
 // middlewares
 app.use(express.json());
