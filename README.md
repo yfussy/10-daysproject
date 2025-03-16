@@ -25,8 +25,3 @@ Follow [contribution guidelines](/CONTRIBUTING.md) for this project
 &nbsp;&nbsp;&nbsp;&nbsp;|--  models/\
 &nbsp;&nbsp;&nbsp;&nbsp;|--  routes/\
 &nbsp;&nbsp;&nbsp;&nbsp;|--  index.js\
-&nbsp;&nbsp;&nbsp;&nbsp;|--  package-lock.json\
-&nbsp;&nbsp;&nbsp;&nbsp;|--  package.json\
-&nbsp;&nbsp;&nbsp;&nbsp;|--  .env (local)\
-&nbsp;&nbsp;&nbsp;&nbsp;|--  node_modules (local)
-
