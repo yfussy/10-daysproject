@@ -4,7 +4,7 @@ const Utils = require('./utils.js');
 // controllers
 // POST /api/clocklogs
 const addSleepLog = async (req, res) => {
-    const { date, sleepDuration, travelDuration, appointmentTime} = req.body;
+    const { sleepDuration, travelDuration, appointmentTime} = req.body;
     const userId = req.user.id;
 
     const wakeTime = Utils.deltaTime(appointmentTime, -travelDuration);
@@ -12,11 +12,12 @@ const addSleepLog = async (req, res) => {
 
     try {
         const user = await User.findById(userId);
+        const date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
         if (!user) {
             return res.status(404).json({message: "User not found"});
         }
 
-        const existingLog = user.clockLogs.find(log => log.date === date);
+        const existingLog = user.clockLogs.clock.find(clock => clock.date === date);
         if (existingLog) {
             existingLog.sleepDuration = sleepDuration;
             existingLog.travelDuration = travelDuration;
