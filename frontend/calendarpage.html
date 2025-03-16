@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/calendarstyle.css">
+    <link rel="stylesheet" href="styles/headerstyle.css">
+</head>
+<body>
+    <div class="header">        
+        <a href="homepage.html">
+            <button class="header-button" id="header-shleep">SHLEEP</button>
+        </a> 
+        <a href="calendarpage.html">
+            <button class="header-button" id="header-calendar">CALENDAR</button>
+        </a>      
+        <a href="">
+            <button class="header-button" id="header-clock">CLOCK</button>
+        </a>
+        <a href="horoscope.html">
+            <button class="header-button" id="header-horoscope">HOROSCOPE</button>
+        </a>
+        <a href="myaccountpage.html">
+            <button class="header-button" id="header-profile"><img src="images/user.png" alt="Button Image"></button>
+        </a>
+    </div>
+    <div class="calendar-container">
+        <h2 id="month-year" class="month-style"></h2>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>SUN</th>
+                    <th>MON</th>
+                    <th>TUE</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th>SAT</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts/calendarscript.js"></script>
+</body>
+</html>
