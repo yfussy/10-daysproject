@@ -1,7 +1,7 @@
 const { ReturnDocument } = require('mongodb');
 const mongoose = require('mongoose');
 
-const ClockSchema = mongoose.Schema(
+const ClockLogSchema = mongoose.Schema(
     {
         date: {
             type: String,
@@ -9,42 +9,39 @@ const ClockSchema = mongoose.Schema(
         },
         sleepTime: {
             type: String,
-            required: true
+            default: null
         },
         sleepDuration: {
             type: Number,
-            required: true
+            default: 0
         },
         wakeTime: {
             type: String,
-            required: true
+            default: null
         },
         travelDuration: {
             type: Number,
-            required: true
+            default: 0
         },
         appointmentTime: {
             type: String,
-            required: true
+            default: null
         },
-    }
-);
-
-const FortuneSchema = mongoose.Schema(
-    {
-        color: {
-            colorFortune: {
-                type: String,
-                required: true
+        fortune:{
+            color: {
+                colorFortune: {
+                    type: String,
+                    default: null
+                },
+                colorUnFortune: {
+                    type: String,
+                    default: null
+                }
             },
-            colorUnFortune: {
-                type: String,
-                required: true
+            number: {
+                type: Number,
+                default: null
             }
-        },
-        number: {
-            type: Number,
-            required: true
         }
     }
 );
@@ -59,20 +56,7 @@ const UserSchema = mongoose.Schema(
             type: String,
             required: true
         },
-        clockLogs: [
-            {
-                clock:{
-                    type: ClockSchema,
-                    required: true
-                },
-                fortune:{
-                    type: FortuneSchema,
-                    required: false,
-                    default: null
-                }
-
-            }
-        ]
+        clockLogs: [ClockLogSchema]
     },
     {
         timestamps: true,
