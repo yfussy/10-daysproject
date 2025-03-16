@@ -17,7 +17,7 @@ const addSleepLog = async (req, res) => {
             return res.status(404).json({message: "User not found"});
         }
 
-        const existingLog = user.clockLogs.clock.find(clock => clock.date === date);
+        const existingLog = user.clockLogs.find(log => log.date === date);
         if (existingLog) {
             existingLog.sleepDuration = sleepDuration;
             existingLog.travelDuration = travelDuration;
