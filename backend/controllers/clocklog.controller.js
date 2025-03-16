@@ -24,7 +24,6 @@ const addSleepLog = async (req, res) => {
             existingLog.appointmentTime = appointmentTime;
             existingLog.wakeTime = wakeTime;
             existingLog.sleepTime = sleepTime;
-            existingLog.fortune = fortune;
         } else {
             user.clockLogs.push({
                 date,
@@ -33,12 +32,11 @@ const addSleepLog = async (req, res) => {
                 wakeTime,
                 travelDuration,
                 appointmentTime,
-                fortune
             });
         }
 
         await user.save();
-        res.status(200).json({message: "Clock log saved!", clockLog: {date, sleepTime, sleepDuration, wakeTime, travelDuration, appointmentTime, fortune}})
+        res.status(200).json({message: "Clock log saved!", clockLog: {date, sleepTime, sleepDuration, wakeTime, travelDuration, appointmentTime}})
     } catch (error) {
         res.status(500).json({message: error.message});
     }
@@ -78,8 +76,51 @@ const getClockLogsByMonth = async (req, res) => {
     }
 };
 
+// PATCH /api/clocklogs/fortune
+const generateOrUpdateFortuneForToday = async (req, res) => {
+    const userId = req.user.id;
+    const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+    const newFortune = Utils.generateFortune();
+
+    try {
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        const log = user.clockLogs.find(log => log.date === today);
+        if (log) {
+            if (!log.fortune) {
+                log.fortune = newFortune;
+            } else {
+                return res.status(400).json({message: "Fortune already Generated Today!"});
+            }
+        } else {
+            user.clockLogs.push({
+                date: today,
+                sleepTime: null,
+                wakeTime: null,
+                sleepDuration: 0,
+                travelDuration: 0,
+                appointmentTime: null,
+                fortune: newFortune
+            });
+        }
+
+        await user.save();
+
+        res.status(200).json({ 
+            message: log ? "Fortune updated for today" : "Fortune created for today",
+            fortune: newFortune
+        });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
 module.exports = {
     addSleepLog,
     getClockLogByDate,
-    getClockLogsByMonth
+    getClockLogsByMonth,
+    generateOrUpdateFortuneForToday
 }
