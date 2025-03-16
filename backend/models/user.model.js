@@ -27,21 +27,24 @@ const ClockSchema = mongoose.Schema(
             type: String,
             required: true
         },
-        fortune: {
-            color: {
-                colorFortune: {
-                    type: String,
-                    required: true
-                },
-                colorUnFortune: {
-                    type: String,
-                    required: true
-                }
+    }
+);
+
+const FortuneSchema = mongoose.Schema(
+    {
+        color: {
+            colorFortune: {
+                type: String,
+                required: true
             },
-            number: {
-                type: Number,
+            colorUnFortune: {
+                type: String,
                 required: true
             }
+        },
+        number: {
+            type: Number,
+            required: true
         }
     }
 );
@@ -56,7 +59,20 @@ const UserSchema = mongoose.Schema(
             type: String,
             required: true
         },
-        clockLogs: [ClockSchema]
+        clockLogs: [
+            {
+                clock:{
+                    type: ClockSchema,
+                    required: true
+                },
+                fortune:{
+                    type: FortuneSchema,
+                    required: false,
+                    default: null
+                }
+
+            }
+        ]
     },
     {
         timestamps: true,
