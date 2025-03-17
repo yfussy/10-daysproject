@@ -98,12 +98,7 @@ const generateOrUpdateFortuneForToday = async (req, res) => {
         } else {
             user.clockLogs.push({
                 date: today,
-                sleepTime: null,
-                wakeTime: null,
-                sleepDuration: 0,
-                travelDuration: 0,
-                appointmentTime: null,
-                fortune: newFortune
+                fortune: newFortune,
             });
         }
 
