@@ -3,8 +3,8 @@ const backURL = "http://localhost:3000";
 document.getElementById("login-form").addEventListener("submit", async function(event) {
     event.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const username = document.getElementById("usernameBox").value;
+    const password = document.getElementById("passwordBox").value;
     console.log(username, password);
     
 
