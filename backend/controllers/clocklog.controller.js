@@ -2,17 +2,17 @@ const User = require('../models/user.model.js');
 const { generateFortune, deltaTime} = require('./utils.js');
 
 // controllers
-// PUT /api/clocklogs
-const addSleepLog = async (req, res) => {
-    const { sleepDuration, travelDuration, appointmentTime} = req.body;
+// PUT /api/clocklogs/:date
+const addSleepLogByDate = async (req, res) => {
+    const { sleepDuration, travelDuration, appointmentTime } = req.body;
     const userId = req.user.id;
+    const date = req.params;
 
     const wakeTime = deltaTime(appointmentTime, -travelDuration);
     const sleepTime = deltaTime(wakeTime, - sleepDuration);
 
     try {
         const user = await User.findById(userId);
-        const date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
         if (!user) {
             return res.status(404).json({message: "User not found"});
         }
@@ -114,7 +114,7 @@ const generateOrUpdateFortuneForToday = async (req, res) => {
 };
 
 module.exports = {
-    addSleepLog,
+    addSleepLogByDate,
     getClockLogByDate,
     getClockLogsByMonth,
     generateOrUpdateFortuneForToday

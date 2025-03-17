@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { addSleepLog, getClockLogByDate, getClockLogsByMonth, generateOrUpdateFortuneForToday } = require('../controllers/clocklog.controller');
+const { addSleepLogByDate , getClockLogByDate, getClockLogsByMonth, generateOrUpdateFortuneForToday } = require('../controllers/clocklog.controller');
 
 const verifyToken = require('../middlewares/auth.middleware.js');
 
 
-router.put('/', verifyToken, addSleepLog);
+router.put('/:date', verifyToken, addSleepLogByDate);
 
 router.get('/:date', verifyToken, getClockLogByDate);
 
