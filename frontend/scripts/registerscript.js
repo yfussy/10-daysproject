@@ -5,24 +5,23 @@ document.getElementById("login-form").addEventListener("submit", async function(
 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    console.log(username, password);
-    
+    const email = document.getElementById("email").value;
+    const firstname = document.getElementById("firstname").value;
+    const lastname = document.getElementById("lastname").value;
+    const birthdate = document.getElementById("birthdate").value;
 
     try {
-        const response = await fetch(`${backURL}/api/users/login`, {
+        const response = await fetch(`${backURL}/api/users/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ username, password })
+            body: JSON.stringify({ username, password, email, name: {firstname, lastname}, birthdate})
         });
 
-        const data = await response.json();
-
         if (response.ok) {
-            localStorage.setItem('token', data.token);
             alert("Login successful!");
-            window.location.href = "../horoscope.html";
+            window.location.href = "./testlogin.html";
         } else {
             alert(data.message);
         }

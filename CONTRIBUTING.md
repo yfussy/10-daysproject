@@ -19,7 +19,8 @@ Try follow these conventional commit format:
 - `perf` : special `refactor` commit, that improve performance
 - `style` : white-space, formatiing, missing indent/semi-colon etc.
 - `docs` : Documentation commits
-- `chore` : Miscellaneous commits (e.g. modifying `.gitignore`) 
+- `chore` : Miscellaneous commits (e.g. modifying `.gitignore`)
+- `(scope)`: Scope of the commit (optional)
 
 ## Git Workflow
 
@@ -30,7 +31,9 @@ Main branch is only for **production-ready code**. Each **feature** or **fix** s
 Keep your local repo stay in sync with remote repo whenever you make changes related to `main` branch
 
 #### Pull the Latest `main` Branch
-<pre>git pull origin main </pre>
+```
+git pull origin main
+```
 
 ### Branch
 
@@ -44,14 +47,21 @@ Try using this naming convention
 
 #### Create Branch
 Only create branch from `main` branch for less complexity
-<pre>git checkout main
+```
+git checkout main
 git pull origin main
-git checkout -b 'branch_name'</pre>
+git checkout -b 'branch_name'
+```
 <sup>`git pull origin main` to make sure `main` is in sync</sup>
 
 #### Keep Branch in Sync
 While working on a branch, pull main (merge) to your branch so it is in sync with current `main`, in case there is a change in `main`.
-<pre>git merge main</pre>
+```
+git checkout master
+git pull
+git checkout mobiledevicesupport
+git merge master
+```
 
 #### Merge Conflicts
 Merge Conflict can occur on both **merging** and **pulling**. When there are changes that `main` and `branch` doesn't match and git doesn't know which line to keep, it throws a **Merge Conflict**
@@ -72,7 +82,9 @@ console.log('Hello from main branch');
 
 #### Push your branch
 Push your branch to `main` regularly, so that other members can see your changes and reduce merge conflict occuring
-<pre>git push origin 'branch name'</pre>
+```
+git push origin 'branch name'
+```
 
 ### PR Process
 
