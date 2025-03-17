@@ -27,17 +27,15 @@
 
             <button class="createanAccount-button" id="createanAccountbutton">Create an account</button>
 
-            <div class="usernameBox">
-                <div class="username">Username</div>
-            </div>
+            <form action="/url" method="GET">
+                <input type="text" class="usernameBox" name="username" placeholder="Username" required>
+                <input type="text" class="passwordBox" name="password" placeholder="Password" required>
+                <button class="forgotPassword-button" id="forgotPasswordbutton">Forgot password</button>
+                <button type="submit" class="logIn-button">log in</button>  
+            </form>
 
-            <div class="passwordBox">
-                <div class="password">Password</div>
-            </div>
+            <!-- <button class="forgotPassword-button" id="forgotPasswordbutton">Forgot password</button> -->
 
-            <button class="forgotPassword-button" id="forgotPasswordbutton">Forgot password</button>
-
-            <button class="logIn-button" id="logInbutton">log in</button>
         </div>
 
         <div class="text">shleep by meawtodkrateam</div>
