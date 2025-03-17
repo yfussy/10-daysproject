@@ -1,0 +1,52 @@
+body{
+    background: white;
+    color: black;
+    font-family: 'Jost', Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.date{
+    display: inline-flex;
+    gap: 15px;
+}
+
+.date-box-container{
+    display: inline-flex;
+    gap: 10px;
+}
+.date-box{
+    width: 95px;
+    height: 40px;
+    background: #AC3030;
+    color: #FFF2D8;
+}
+
+#big-rect{
+    width: 650px; 
+    height: 730px; 
+    background: #FFF2D8; 
+    border-radius: 30px;
+}
+
+.time{
+    display: inline-flex;
+    gap: 90px;
+    margin: 70px;
+}
+
+.circle-container{
+    display: flex;
+    gap: 25px;
+}
+
+.circle-time{
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* Centers the text horizontally */
+    align-items: center; /* Centers the text vertically */
+    font-size: 20px;
+}
