@@ -25,10 +25,11 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 35px;
     width: 25vw;
     height: 35vh;
-    margin: 35vh auto;
+    margin: 30vh auto;
+    transform: translateY(+15%);
     text-align: center;
     align-items: center; /* Centers items horizontally */
     justify-content: center; /* Centers items vertically if needed */
@@ -36,8 +37,8 @@ body {
 
 .roulettepic{
     position: relative;
-    width: 30vw;
-    height: 40vw;
+    width: 25vw;
+    height: 35vw;
     z-index: 1;
     object-fit: cover;
 }
@@ -75,14 +76,16 @@ body {
 .horoinfo {
     background-color: #FFF2D8;
     padding: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 30vw;
-    height: 60vh;
-    transform: translateY(+50%);
+    width: 27.5vw;
+    height: 65vh;
+    transform: translateY(+22.5%);
     align-items: center; /* Centers items horizontally */
     justify-items: center; /* Centers items vertically if needed */
 }
@@ -98,15 +101,22 @@ body {
     height: auto;
 }
 
+.subhoroheader {
+    justify-items: center; /* Centers items vertically if needed */
+}
+
 .HOROSCOPE {
+    transform: translateY(-22.5%);
     font-family: Jost;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 36px;
 }
 
 .LNcontainer {
     background-color: #FFF9ED;
     color: #929292;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-family: Jost;
     font-weight: 600;
     font-size: 20px;
@@ -124,6 +134,9 @@ body {
 
 .YourHoroscopecontainer {
     background-color: #FFF9ED;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: #929292;   
     font-family: Jost;
     font-weight: 600;
@@ -138,6 +151,7 @@ body {
     font-family: Jost;
     font-weight: 600;
     font-size: 20px;
+    opacity: 71%;
 }
 
 .circle-container {
@@ -148,6 +162,13 @@ body {
 .circle {
     width: 50px;
     height: 50px;
-    background-color: red;
     border-radius: 50%;
+}
+
+#C1 {
+    background-color: #000000;
+}
+
+#C2 {
+    background-color: #FFFFFF;
 }
