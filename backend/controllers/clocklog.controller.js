@@ -113,9 +113,46 @@ const generateOrUpdateFortuneForToday = async (req, res) => {
     }
 };
 
+// PUT /api/clocklogs/event/:date
+const addEventByDate = async (req, res) => {
+    const { type, title, location, duration, note } = req.body;
+    const event = {
+        type,
+        title,
+        location,
+        duration,
+        note
+    };
+    const userId = req.user.id;
+    const date = req.params;
+
+    try {
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({message: "User not found"});
+        }
+
+        const existingLog = user.clockLogs.find(log => log.date === date);
+        if (existingLog) {
+            existingLog.event = event;
+        } else {
+            user.clockLogs.push({
+                date,
+                event
+            });
+        }
+
+        await user.save();
+        res.status(200).json({message: "Event saved!", event});
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+};
+
 module.exports = {
     addSleepLogByDate,
     getClockLogByDate,
     getClockLogsByMonth,
-    generateOrUpdateFortuneForToday
+    generateOrUpdateFortuneForToday,
+    addEventByDate
 }

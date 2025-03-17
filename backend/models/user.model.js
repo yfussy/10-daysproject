@@ -42,6 +42,34 @@ const ClockLogSchema = mongoose.Schema(
                 type: Number,
                 default: null
             }
+        },
+        event: {
+            type: {
+                type: String,
+                default: null
+            },
+            title: {
+                type: String,
+                default: null
+            },
+            location: {
+                type: String,
+                default: null
+            },
+            duration: {
+                start: {
+                    type: String,
+                    default: "0:00"
+                },
+                end: {
+                    type: String,
+                    default: "23:59"
+                }
+            },
+            note: {
+                type: String,
+                default: null
+            }
         }
     }
 );
