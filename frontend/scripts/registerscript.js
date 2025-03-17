@@ -41,3 +41,13 @@ document.querySelector(".createAccount-button").addEventListener("click", async 
         alert("Fill all missing fields!");
     }
 });
+
+document.querySelector(".login-button").addEventListener("click", () => {
+    window.location.href = "login.html";
+});
+
+document.querySelectorAll(".header-button").forEach(button => {
+    button.addEventListener("click", () => {
+        alert("Please Log in First!")
+    });
+});

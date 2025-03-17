@@ -31,3 +31,13 @@ document.getElementById("login-form").addEventListener("submit", async function(
         alert("An error occurred during login.");
     }
 });
+
+document.getElementById("createanAccountbutton").addEventListener("click", () => {
+    window.location.href = "register.html";
+});
+
+document.querySelectorAll(".header-button").forEach(button => {
+    button.addEventListener("click", () => {
+        alert("Please Log in First!")
+    });
+});
