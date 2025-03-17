@@ -1,10 +1,4 @@
-const HomeButton = document.getElementById('Home-Button');
-const CalendarButton = document.getElementById('Calendar-Button');
-press(CalendarButton, 'Calendar-Button');  
-const ClockButton = document.getElementById('Clock-Button');
-press(ClockButton, 'Clock-Button');  
-const HoroscopeButton = document.getElementById('Horoscope-Button');
-press(HoroscopeButton, 'Horoscope-Button');  
+const HoroscopeButton = document.getElementById('header-horoscope'); 
 
 HoroscopeButton.addEventListener('click', async() => {
     const token = localStorage.getItem('token');
@@ -15,7 +9,7 @@ HoroscopeButton.addEventListener('click', async() => {
     }
 
     try {
-        const response = await fetch(`${backURL}/api/clocklogs/fortune/status`, {
+        const response = await fetch(`${backURL}/api/clocklogs/fortune/avaliable`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
