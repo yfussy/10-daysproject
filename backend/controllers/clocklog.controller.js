@@ -76,7 +76,21 @@ const getClockLogsByMonth = async (req, res) => {
     }
 };
 
-// PUT /api/clocklogs/fortune
+// GET /api/clocklogs/fortune
+const getFortune = async (req, res) => {
+    const userId = req.user.id;
+    const today = new Date().toISOString().split('T')[0]; 
+    try { 
+        const user = await User.findById(userId);
+        const todayFortune = user.clockLogs.find(log => log.date === today);
+
+        res.status(200).json(todayFortune);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+// PUT /api/clocklogs/fortune/generate
 const generateOrUpdateFortuneForToday = async (req, res) => {
     const userId = req.user.id;
     const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
@@ -175,6 +189,7 @@ module.exports = {
     addSleepLogByDate,
     getClockLogByDate,
     getClockLogsByMonth,
+    getFortune,
     generateOrUpdateFortuneForToday,
     getFortuneStatus,
     addEventByDate
