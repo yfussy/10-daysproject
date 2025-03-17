@@ -33,7 +33,7 @@ body {
     font-size: 28px;
 }
 #header-profile img {
-    width: 45px; /* Adjusted size */
+    width: 45px; 
     height: auto;
     max-width: 100%;
     display: block;
