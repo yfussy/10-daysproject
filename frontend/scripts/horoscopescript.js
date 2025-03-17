@@ -1,5 +1,3 @@
-const backURL = "http://localhost:3000";
-
 document.getElementById('Spin-button').addEventListener('click', async() => {
     const token = localStorage.getItem('token');
 
