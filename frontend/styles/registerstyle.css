@@ -18,7 +18,7 @@
     border-radius: 50%;
     z-index: 1; 
 }
-.editProfile-button{
+.editProfile-button, .login-button {
     position: relative;
     top: 235px;
     right: 20px;
@@ -32,13 +32,21 @@
     font-size: 14px;
     text-decoration: underline;
 }
-.editProfile-button:hover {
+
+.login-button {
+    position: relative;
+    top: 150px;
+    left: 216px;
+    width: auto;
+}
+
+.editProfile-button:hover, .login-button:hover {
     color:black;
     font-family: Jost;
     font-weight: 400;
     font-size: 14px;
 }
-input[type=text] {
+input[type=text], input[type=password] {
     position: relative;
     padding-left:28px;
     outline: none;

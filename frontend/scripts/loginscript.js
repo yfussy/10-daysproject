@@ -3,14 +3,14 @@ const backURL = "http://localhost:3000";
 document.getElementById("login-form").addEventListener("submit", async function(event) {
     event.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const username = document.getElementById("usernameBox").value;
+    const password = document.getElementById("passwordBox").value;
     console.log(username, password);
     
 
     try {
         const response = await fetch(`${backURL}/api/users/login`, {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -22,7 +22,7 @@ document.getElementById("login-form").addEventListener("submit", async function(
         if (response.ok) {
             localStorage.setItem('token', data.token);
             alert("Login successful!");
-            window.location.href = "../horoscope.html";
+            window.location.href = "horoscope.html";
         } else {
             alert(data.message);
         }
@@ -30,4 +30,14 @@ document.getElementById("login-form").addEventListener("submit", async function(
         console.error('Error:', error);
         alert("An error occurred during login.");
     }
+});
+
+document.getElementById("createanAccountbutton").addEventListener("click", () => {
+    window.location.href = "register.html";
+});
+
+document.querySelectorAll(".header-button").forEach(button => {
+    button.addEventListener("click", () => {
+        alert("Please Log in First!")
+    });
 });

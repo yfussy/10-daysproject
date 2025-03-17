@@ -1,32 +1,53 @@
 const backURL = "http://localhost:3000";
 
-document.getElementById("login-form").addEventListener("submit", async function(event) {
+document.querySelector(".createAccount-button").addEventListener("click", async function(event) {
     event.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const email = document.getElementById("email").value;
-    const firstname = document.getElementById("firstname").value;
-    const lastname = document.getElementById("lastname").value;
-    const birthdate = document.getElementById("birthdate").value;
+    const username = document.querySelector(".usernameBox").value;
+    const password = document.querySelector(".passwordBox").value;
+    const email = document.querySelector(".emailBox").value;
+    const firstname = document.querySelector(".fnameBox").value;
+    const lastname = document.querySelector(".lnameBox").value;
+    const birthdate = document.querySelector(".birthday").value;
+    const checkPassword = document.querySelector(".CpasswordBox").value;
 
-    try {
-        const response = await fetch(`${backURL}/api/users/register`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ username, password, email, name: {firstname, lastname}, birthdate})
-        });
+    if (username || password || email || firstname || lastname || birthdate) {
+        if (password === checkPassword) {
+            try {
+                let response = await fetch(`${backURL}/api/users/register`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password, email, name: {firstname, lastname}, birthdate})
+                });
 
-        if (response.ok) {
-            alert("Login successful!");
-            window.location.href = "./testlogin.html";
+                const message = await response.json();
+
+                if (response.ok) {
+                    alert(message.message);
+                    window.location.href = "login.html";
+                } else {
+                    alert(message.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert("An error occurred during login.");
+            }
         } else {
-            alert(data.message);
+            alert("Password does not match!");
         }
-    } catch (error) {
-        console.error('Error:', error);
-        alert("An error occurred during login.");
+    } else {
+        alert("Fill all missing fields!");
     }
+});
+
+document.querySelector(".login-button").addEventListener("click", () => {
+    window.location.href = "login.html";
+});
+
+document.querySelectorAll(".header-button").forEach(button => {
+    button.addEventListener("click", () => {
+        alert("Please Log in First!")
+    });
 });

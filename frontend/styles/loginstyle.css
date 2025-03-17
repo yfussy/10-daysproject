@@ -47,7 +47,7 @@
     font-weight: 400;
     font-size: 14px;
 }
-input[type=text] {
+input[type=text], input[type=password] {
     padding-left:28px;
     position: relative;
     left: 0;
@@ -65,11 +65,11 @@ input[type=text] {
 ::placeholder {
   color: #929292;
 }
-.usernameBox {
+#usernameBox {
     margin-left: 61px;
     margin-top: 30px;
 }
-.passwordBox {
+#passwordBox {
     margin-left: 61px;
     margin-top: 25px;
 }
