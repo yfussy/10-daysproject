@@ -1,5 +1,5 @@
 const User = require('../models/user.model.js');
-const Utils = require('./utils.js');
+const { generateFortune, deltaTime} = require('./utils.js');
 
 // controllers
 // POST /api/clocklogs
@@ -7,8 +7,8 @@ const addSleepLog = async (req, res) => {
     const { sleepDuration, travelDuration, appointmentTime} = req.body;
     const userId = req.user.id;
 
-    const wakeTime = Utils.deltaTime(appointmentTime, -travelDuration);
-    const sleepTime = Utils.deltaTime(wakeTime, - sleepDuration);
+    const wakeTime = deltaTime(appointmentTime, -travelDuration);
+    const sleepTime = deltaTime(wakeTime, - sleepDuration);
 
     try {
         const user = await User.findById(userId);
@@ -80,7 +80,7 @@ const getClockLogsByMonth = async (req, res) => {
 const generateOrUpdateFortuneForToday = async (req, res) => {
     const userId = req.user.id;
     const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-    const newFortune = Utils.generateFortune();
+    const newFortune = generateFortune();
 
     try {
         const user = await User.findById(userId);
