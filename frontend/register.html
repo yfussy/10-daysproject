@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/headerstyle.css">
+    <link rel="stylesheet" href="styles/registerstyle.css">
+    
+
+</head>
+<body>
+    <div class="header">        
+        <button class="header-button" id="header-shleep">SHLEEP</button>
+        <button class="header-button" id="header-calendar">CALENDAR</button>
+        <button class="header-button" id="header-clock">CLOCK</button>
+        <button class="header-button" id="header-horoscope">HOROSCOPE</button>
+        <button class="header-button" id="header-profile"><img src="images/user.png" alt="Button Image"></button>
+    </div>
+
+    <div class="box">
+        <img src="images/user.png" class="Myaccount-pics">
+        <button class="editProfile-button" id="editProfile">Edit profile</button>
+
+        <input type="text" class="fnameBox" name="fname" placeholder="First name" required>
+        <input type="text" class="lnameBox" name="lname" placeholder="Last name" required>
+
+        <label class="dtext">Your birthday :</label>
+        <input type="date" class="birthday" id="birthday" name="birthday"><br>
+
+        <input type="text" class="emailBox" name="email" placeholder="Email" required><br>
+        <input type="text" class="usernameBox" name="username" placeholder="Username" required><br>
+        <input type="password" class="passwordBox" name="password" placeholder="Password" required><br>
+        <input type="password" class="CpasswordBox" name="Cpassword" placeholder="Confirm password" required><br>
+        <button class="createAccount-button">Create Account</button> 
+        <button class="login-button" id="login">Have an account already?</button>
+        
+    </div>
+
+    <div class="text">shleep by meawtodkrateam</div>
+    <script src="scripts/registerscript.js"></script>
+</body>
+</html>
