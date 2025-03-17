@@ -1,5 +1,3 @@
-const backURL = "http://localhost:3000";
-
 document.getElementById("login-form").addEventListener("submit", async function(event) {
     event.preventDefault();
 

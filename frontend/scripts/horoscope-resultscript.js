@@ -1,5 +1,3 @@
-const backURL = "http://localhost:3000";
-
 function openPopup() {
     document.getElementById('popup').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
