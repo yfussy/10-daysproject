@@ -43,7 +43,6 @@ input[type=text] {
     padding-left:28px;
     outline: none;
     border: none;
-    width: 212px;
     height: 40px;
     background-color: #FFFAF0;
     border-radius: 12px;
@@ -56,10 +55,12 @@ input[type=text] {
     color: #929292;
   }
 .fnameBox{
+    width: 212px;
     left: 140px;
     bottom: 95px;
 }
 .lnameBox{
+    width: 212px;
     left: 170px;
     bottom: 95px;
 }
@@ -90,18 +91,22 @@ input[type=text] {
     color:#929292;
 }
 .emailBox{
+    width: 240px;
     left: 590px;
     top: 0px;
 }
 .usernameBox{
+    width: 240px;
     left: 590px;
     top: 22.5px;
 }
 .passwordBox{
+    width: 240px;
     left: 590px;
     top: 45px;
 }
 .CpasswordBox{
+    width: 240px;
     left: 590px;
     top: 67.5px;
 }
