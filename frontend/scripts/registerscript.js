@@ -11,23 +11,24 @@ document.querySelector(".createAccount-button").addEventListener("click", async 
     const birthdate = document.querySelector(".birthday").value;
     const checkPassword = document.querySelector(".CpasswordBox").value;
 
-    try {
-        const response = await fetch(`${backURL}/api/users/register`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ username, password, email, name: {firstname, lastname}, birthdate})
-        });
+    if (username || password || email || firstname || lastname || birthdate) {
+        if (password === checkPassword) {
+            try {
+                let response = await fetch(`${backURL}/api/users/register`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password, email, name: {firstname, lastname}, birthdate})
+                });
 
         if (response.ok) {
             alert("Login successful!");
             window.location.href = "./testlogin.html";
         } else {
-            alert(data.message);
+            alert("Password does not match!");
         }
-    } catch (error) {
-        console.error('Error:', error);
-        alert("An error occurred during login.");
+    } else {
+        alert("Fill all missing fields!");
     }
 });
