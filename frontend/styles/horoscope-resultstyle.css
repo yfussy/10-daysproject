@@ -1,0 +1,153 @@
+object{
+    width: 100vw;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    border:none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.wrapper {
+    top: 1%;
+    display: flex;
+    gap: 10vw; /* Space */
+    align-items: flex-start; /* Aligns items at the top */
+    margin-left: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 25vw;
+    height: 35vh;
+    margin: 35vh auto;
+    text-align: center;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically if needed */
+}
+
+.roulettepic{
+    position: relative;
+    width: 30vw;
+    height: 40vw;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.spinbutton-style{
+    justify-items: center;
+    width: 127px;
+    height: 46px;
+    border-radius: 13px;
+    border: none;
+    background-color: #AC3030;
+    cursor: pointer;
+    color:#FFF2D8;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.spinbutton-style:hover {
+    background-color: #942727;
+}
+
+.cooldowntimer {
+    justify-items: center;
+    width: 300px;
+    height: 46px;
+    border-radius: 13px;
+    border: none;
+    color: #942727;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.horoinfo {
+    background-color: #FFF2D8;
+    padding: 40px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 30vw;
+    height: 60vh;
+    transform: translateY(+50%);
+    align-items: center; /* Centers items horizontally */
+    justify-items: center; /* Centers items vertically if needed */
+}
+
+.horoheader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.horoinfo img {
+    width: 8vw;
+    height: auto;
+}
+
+.HOROSCOPE {
+    font-family: Jost;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.LNcontainer {
+    background-color: #FFF9ED;
+    color: #929292;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 16px;
+    width: 15vw;
+    height: 10vh;
+    align-items: center; /* Centers items horizontally */
+    justify-items: center; /* Centers items vertically if needed */
+}
+
+.TheLuckynumber {
+    font-weight: 600;
+    font-size: 40px;   
+}
+
+.YourHoroscopecontainer {
+    background-color: #FFF9ED;
+    color: #929292;   
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 16px; 
+    width: 22.5vw;
+    height: 30vh;
+}
+
+.YourLuckyColoris {
+    color: #000000;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.circle-container {
+    display: flex;
+    gap: 20px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}

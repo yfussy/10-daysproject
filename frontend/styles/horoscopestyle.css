@@ -16,19 +16,17 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 500px;
-    margin: 150px auto;
+    width: 25vw;
+    height: 35vh;
+    margin: 35vh auto;
     text-align: center;
     align-items: center; /* Centers items horizontally */
     justify-content: center; /* Centers items vertically if needed */
 }
-.roulettebg{
-    padding: 5px;
-}
 .roulettepic{
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 30vw;
+    height: 40vw;
     z-index: 1;
     object-fit: cover;
 }
