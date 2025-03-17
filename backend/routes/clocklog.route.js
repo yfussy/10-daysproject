@@ -5,7 +5,7 @@ const { addSleepLog, getClockLogByDate, getClockLogsByMonth, generateOrUpdateFor
 const verifyToken = require('../middlewares/auth.middleware.js');
 
 
-router.post('/', verifyToken, addSleepLog);
+router.put('/', verifyToken, addSleepLog);
 
 router.get('/:date', verifyToken, getClockLogByDate);
 

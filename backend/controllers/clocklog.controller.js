@@ -2,7 +2,7 @@ const User = require('../models/user.model.js');
 const { generateFortune, deltaTime} = require('./utils.js');
 
 // controllers
-// POST /api/clocklogs
+// PUT /api/clocklogs
 const addSleepLog = async (req, res) => {
     const { sleepDuration, travelDuration, appointmentTime} = req.body;
     const userId = req.user.id;
