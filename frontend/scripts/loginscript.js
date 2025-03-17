@@ -10,7 +10,7 @@ document.getElementById("login-form").addEventListener("submit", async function(
 
     try {
         const response = await fetch(`${backURL}/api/users/login`, {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
