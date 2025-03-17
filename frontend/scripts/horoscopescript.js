@@ -11,7 +11,7 @@ SpinButton.addEventListener('click', async() => {
     
     try {
     const response = await fetch('http://localhost:3000/api/clocklogs/fortune', {
-        method: 'PATCH',
+        method: 'PUT',
         headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`

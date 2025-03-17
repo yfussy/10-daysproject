@@ -76,7 +76,7 @@ const getClockLogsByMonth = async (req, res) => {
     }
 };
 
-// PATCH /api/clocklogs/fortune
+// PUT /api/clocklogs/fortune
 const generateOrUpdateFortuneForToday = async (req, res) => {
     const userId = req.user.id;
     const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
