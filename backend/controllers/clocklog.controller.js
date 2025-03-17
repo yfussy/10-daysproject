@@ -113,6 +113,28 @@ const generateOrUpdateFortuneForToday = async (req, res) => {
     }
 };
 
+// GET /api/fortune/status
+const getFortuneStatus = async (req, res) => {
+    const userId = req.user.id;
+    const today = new Date().toISOString().split('T')[0];
+
+     try {
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({message: "User not found"});
+        }
+
+        const log = user.clockLogs.find(log => log.date === today);
+        if(!log?.fortune) {
+            res.status(200).json({message: "Fortune Avaliable", avaliable: true});
+        } else {
+            res.status(200).json({message: "Fortune Unavaliable", avaliable: false});
+        }
+     } catch (error) {
+        res.status(500).json({message: error.message});
+     }
+}
+
 // PUT /api/clocklogs/event/:date
 const addEventByDate = async (req, res) => {
     const { type, title, location, duration, note } = req.body;
@@ -154,5 +176,6 @@ module.exports = {
     getClockLogByDate,
     getClockLogsByMonth,
     generateOrUpdateFortuneForToday,
+    getFortuneStatus,
     addEventByDate
 }
