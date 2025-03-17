@@ -17,9 +17,10 @@ HoroscopeButton.addEventListener('click', async() => {
             }
         });
 
-        const { status } = await response.json();
+        const data = await response.json();
+        console.log(data);
 
-        if (status) {
+        if (data.avaliable) {
             window.location.href = "horoscope.html";
         } else {
             window.location.href = "horoscope-result.html";
