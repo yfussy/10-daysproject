@@ -1,5 +1,7 @@
 const calendarBody = document.getElementById("calendar-body");
 const monthYearDisplay = document.getElementById("month-year");
+const body = document.querySelector("body");  
+const wrapper = document.querySelector(".wrapper");
 
 const date = new Date();
 const year = date.getFullYear();
@@ -34,8 +36,7 @@ for (let i = firstDay; i < 7; i++) {
     button.appendChild(dateSpan);
 
     button.addEventListener("click", () => {
-        const clickedDate = new Date(year, month, button.textContent);
-        alert(`${dayNames[clickedDate.getDay()]}, ${monthNames[month]} ${button.textContent}, ${year}`);
+        wrapper.classList.add("transparent");
     });
 
     cell.appendChild(button);
@@ -59,8 +60,7 @@ while (dayCount <= daysInMonth) {
             button.appendChild(dateSpan);
 
             button.addEventListener("click", () => {
-                const clickedDate = new Date(year, month, button.textContent);
-                alert(`${dayNames[clickedDate.getDay()]}, ${monthNames[month]} ${button.textContent}, ${year}`);
+                wrapper.classList.add("transparent"); 
             });
 
             cell.appendChild(button);
@@ -72,3 +72,68 @@ while (dayCount <= daysInMonth) {
 
     calendarBody.appendChild(row);
 }
+
+const calendarButtons = document.querySelectorAll(".calendar-btn");
+
+calendarButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const rectangle = document.createElement("div");
+        rectangle.id = "rectangle";
+
+        const popupContent = document.createElement("div");
+        popupContent.id = "popup-content";
+
+        const dm = new Date();
+        const shtmonthNames = [
+            "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+            "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
+        ];
+
+        const date = document.createElement("div");
+        date.classList.add("date-style");
+        
+        const clickedDate = button.textContent;  
+        date.textContent = `${clickedDate} ${shtmonthNames[dm.getMonth()]} `;
+        
+        const closeButton = document.createElement("button");
+        closeButton.classList.add("close-btn");
+        closeButton.textContent = "X";
+
+        const textTitle = document.createElement("input");
+        textTitle.id = "title-text";
+        textTitle.placeholder = "Title";
+
+        const textLo = document.createElement("input");
+        textLo.id = "lo-text";
+        textLo.placeholder = "Location";
+
+        const alldaybtn = document.createElement("button");
+        alldaybtn.classList.add("allday-btn");
+        alldaybtn.textContent = "ALL-DAY";
+
+        const st = document.createElement("div");
+        st.classList.add("st-style");
+        st.textContent = "Start";
+
+        const en = document.createElement("div");
+        en.classList.add("en-style");
+        en.textContent = "End";
+
+        popupContent.appendChild(date);
+        popupContent.appendChild(closeButton);
+        popupContent.appendChild(textTitle);
+        popupContent.appendChild(textLo);
+        popupContent.appendChild(alldaybtn);
+        popupContent.appendChild(st);
+        popupContent.appendChild(en);
+
+        rectangle.appendChild(popupContent);
+        document.body.appendChild(rectangle);
+        rectangle.classList.add("show");
+
+        closeButton.addEventListener("click", () => {
+            rectangle.remove(); 
+            wrapper.classList.remove("transparent");
+        });
+    });
+});
