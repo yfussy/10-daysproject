@@ -11,6 +11,6 @@ router.get('/:date', verifyToken, getClockLogByDate);
 
 router.get('/month/:month', verifyToken, getClockLogsByMonth);
 
-router.patch('/fortune', verifyToken, generateOrUpdateFortuneForToday)
+router.put('/fortune', verifyToken, generateOrUpdateFortuneForToday)
 
 module.exports = router;
