@@ -22,9 +22,18 @@ document.querySelector(".createAccount-button").addEventListener("click", async 
                     body: JSON.stringify({ username, password, email, name: {firstname, lastname}, birthdate})
                 });
 
-        if (response.ok) {
-            alert("Login successful!");
-            window.location.href = "./testlogin.html";
+                const message = await response.json();
+
+                if (response.ok) {
+                    alert(message.message);
+                    window.location.href = "login.html";
+                } else {
+                    alert(message.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert("An error occurred during login.");
+            }
         } else {
             alert("Password does not match!");
         }
