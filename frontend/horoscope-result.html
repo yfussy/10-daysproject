@@ -16,6 +16,17 @@
             <button class="header-button" id="header-horoscope">HOROSCOPE</button>
             <button class="header-button" id="header-profile"><img src="images/user.png" alt="Button Image"></button>
         </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <button class="close-btn" onclick="closePopup()">X</button>
+            <div class="popuptextandnumbercontainer">
+                <div class="popupYourLuckynumberis">YOUR</div>
+                <div class="popupYourLuckynumberis">LUCKY NUMBER</div>
+                <div class="popupYourLuckynumberis">IS...</div>
+                <div class="popupLuckynumber">00</div>
+            </div>
+            <div class="cooldowntimer" id="popupcooldowntimer">Next Spin in 00:00:00</div>
+        </div>
         <div class="wrapper">
             <div class="container">
                 <img src="images/roulettecolored.png" class="roulettepic">
@@ -44,4 +55,5 @@
             </div>
         </div>
     </body>
+    <script src="scripts/horoscope-result.js"></script>
 </html>
