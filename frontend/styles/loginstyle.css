@@ -107,7 +107,8 @@ input[type=text] {
     height: 46px;
 }
 .text {
-    margin-top: 20px;
+    top: 20px;
+    position: relative;
     text-align: center;
     font-family: jost;
     font-weight: 600;
