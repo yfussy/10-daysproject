@@ -5,14 +5,14 @@ const { addSleepLogByDate , getClockLogByDate, getClockLogsByMonth, generateOrUp
 const verifyToken = require('../middlewares/auth.middleware.js');
 
 
-router.put('/:date', verifyToken, addSleepLogByDate);
+router.put('/clock/:date', verifyToken, addSleepLogByDate);
 
-router.get('/:date', verifyToken, getClockLogByDate);
+router.get('/date/:date', verifyToken, getClockLogByDate);
 
 router.get('/month/:month', verifyToken, getClockLogsByMonth);
 
 router.put('/fortune', verifyToken, generateOrUpdateFortuneForToday);
 
-router.put('event/:date', verifyToken, addEventByDate);
+router.put('/event/:date', verifyToken, addEventByDate);
 
 module.exports = router;

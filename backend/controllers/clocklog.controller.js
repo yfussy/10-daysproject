@@ -2,7 +2,7 @@ const User = require('../models/user.model.js');
 const { generateFortune, deltaTime} = require('./utils.js');
 
 // controllers
-// PUT /api/clocklogs/:date
+// PUT /api/clocklogs/clock/:date
 const addSleepLogByDate = async (req, res) => {
     const { sleepDuration, travelDuration, appointmentTime } = req.body;
     const userId = req.user.id;
@@ -42,7 +42,7 @@ const addSleepLogByDate = async (req, res) => {
     }
 }
 
-// GET /api/clocklogs/:date
+// GET /api/clocklogs/date/:date
 const getClockLogByDate = async (req, res) => {
     const userId = req.user.id;
     const { date } = req.params;
