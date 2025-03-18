@@ -1,5 +1,3 @@
-const backURL = "http://localhost:3000";
-
 function openPopup() {
     document.getElementById('popup').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
@@ -70,10 +68,10 @@ function updateCountdown() {
     });
   }
 
-  // Update immediately
-  updateCountdown();
+// Update immediately
+updateCountdown();
 
-  // Then every second
-  const timer = setInterval(updateCountdown, 1000);
+// Then every second
+const timer = setInterval(updateCountdown, 1000);
 
 renderFortune();

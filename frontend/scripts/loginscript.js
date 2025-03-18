@@ -1,5 +1,3 @@
-const backURL = "http://localhost:3000";
-
 document.getElementById("login-form").addEventListener("submit", async function(event) {
     event.preventDefault();
 
@@ -22,7 +20,7 @@ document.getElementById("login-form").addEventListener("submit", async function(
         if (response.ok) {
             localStorage.setItem('token', data.token);
             alert("Login successful!");
-            window.location.href = "horoscope.html";
+            window.location.href = "homepage.html";
         } else {
             alert(data.message);
         }

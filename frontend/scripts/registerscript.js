@@ -1,5 +1,3 @@
-const backURL = "http://localhost:3000";
-
 document.querySelector(".createAccount-button").addEventListener("click", async function(event) {
     event.preventDefault();
 
