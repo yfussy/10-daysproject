@@ -13,7 +13,7 @@ Follow [contribution guidelines](/CONTRIBUTING.md) for this project
 
 ## File Structure
 
-**frontend/**.html\
+**docs/**.html (frontend)\
 &nbsp;&nbsp;&nbsp;&nbsp;|--  styles/.css\
 &nbsp;&nbsp;&nbsp;&nbsp;|--  scripts/.js\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--  utils/.js\
