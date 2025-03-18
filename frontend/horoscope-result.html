@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Horoscope</title>
+        <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/horoscope-resultstyle.css">
+        <link rel="stylesheet" href="styles/headerstyle.css">
+    </head>
+    <body>
+        <div class="header">        
+            <a href="homepage.html">
+                <button class="header-button" id="header-shleep">SHLEEP</button>
+            </a> 
+            <a href="">
+                <button class="header-button" id="header-calendar">CALENDAR</button>
+            </a>      
+            <a href="">
+                <button class="header-button" id="header-clock">CLOCK</button>
+            </a>
+
+            <button class="header-button" id="header-horoscope">HOROSCOPE</button>
+            
+            <a href="myaccountpage.html">
+                <button class="header-button" id="header-profile"><img src="images/user.png" alt="Button Image"></button>
+            </a>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <button class="close-btn" onclick="closePopup()">X</button>
+            <div class="popuptextandnumbercontainer">
+                <div class="popupYourLuckynumberis">YOUR</div>
+                <div class="popupYourLuckynumberis">LUCKY NUMBER</div>
+                <div class="popupYourLuckynumberis">IS...</div>
+                <div class="popupLuckynumber">00</div>
+            </div>
+            <div class="cooldowntimer" id="popupcooldowntimer">Next Spin in 00:00:00</div>
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <img src="images/roulettecolored.png" class="roulettepic">
+                <button class="spinbutton-style" id="Spin-button">Spin</button>
+                <div class="cooldowntimer">Next Spin in 00:00:00</div>
+            </div>
+            <div class="horoinfo">
+                <div class="horoheader"> 
+                    <img src="images/crystal-ball.png" alt="Sample Image">
+                    <div class="subhoroheader">
+                        <div class="HOROSCOPE">HOROSCOPE</div>
+                        <div class="LNcontainer">
+                            <div class="YourLuckynumberis">Your Lucky number is</div>
+                            <div class="TheLuckynumber">00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="YourHoroscopecontainer">
+                    <div class="YourHoroscope">Your Horoscope</div>
+                </div>
+                <div class="YourLuckyColoris">Your Lucky Color is ...</div>
+                <div class="circle-container">
+                    <div class="circle" id="C1"></div>
+                    <div class="circle" id="C2"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="scripts/backendURL.js"></script>
+    <script src="scripts/horoscope-resultscript.js"></script>
+    <script src="scripts/headerscript.js"></script>
+</html>

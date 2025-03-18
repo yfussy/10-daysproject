@@ -1,0 +1,235 @@
+object{
+    width: 100vw;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    border:none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 18px;
+    z-index: 1001;
+    background: #AC3030;       
+    width: 406px;
+    height: 535px;
+    justify-items: center; /* Centers items vertically if needed */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 1000;
+}
+.close-btn {
+    position: relative;
+    background: #AC3030;
+    color: #FFF2D8;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-size: 36px;
+    font-weight: bold;
+    transform: translateY(-3px);
+    transform: translateX(+3px);
+}
+
+.popuptextandnumbercontainer{
+    top: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center;
+    transform: translateY(+22%);
+}
+
+.popupYourLuckynumberis {
+    color:#FFF2D8;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.popupLuckynumber {
+    color:#FFF2D8;
+    font-size: 20px;
+    font-weight: bold;  
+}
+
+.wrapper {
+    top: 1%;
+    display: flex;
+    gap: 10vw; /* Space */
+    align-items: flex-start; /* Aligns items at the top */
+    margin-left: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 25vw;
+    height: 35vh;
+    margin: 30vh auto;
+    transform: translateY(+15%);
+    text-align: center;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically if needed */
+}
+
+.roulettepic{
+    position: relative;
+    width: 25vw;
+    height: 35vw;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.spinbutton-style{
+    justify-items: center;
+    width: 127px;
+    height: 46px;
+    border-radius: 13px;
+    border: none;
+    background-color: #AC3030;
+    cursor: pointer;
+    color:#FFF2D8;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.spinbutton-style:hover {
+    background-color: #942727;
+}
+
+.cooldowntimer {
+    justify-items: center;
+    width: 300px;
+    height: 46px;
+    border-radius: 13px;
+    border: none;
+    color: #942727;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.horoinfo {
+    background-color: #FFF2D8;
+    padding: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 27.5vw;
+    height: 65vh;
+    transform: translateY(+22.5%);
+    align-items: center; /* Centers items horizontally */
+    justify-items: center; /* Centers items vertically if needed */
+}
+
+.horoheader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.horoinfo img {
+    width: 8vw;
+    height: auto;
+}
+
+.subhoroheader {
+    justify-items: center; /* Centers items vertically if needed */
+}
+
+.HOROSCOPE {
+    transform: translateY(-22.5%);
+    font-family: Jost;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.LNcontainer {
+    background-color: #FFF9ED;
+    color: #929292;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 16px;
+    width: 15vw;
+    height: 10vh;
+    align-items: center; /* Centers items horizontally */
+    justify-items: center; /* Centers items vertically if needed */
+}
+
+.TheLuckynumber {
+    font-weight: 600;
+    font-size: 40px;   
+}
+
+.YourHoroscopecontainer {
+    background-color: #FFF9ED;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #929292;   
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 16px; 
+    width: 21vw;
+    height: 30vh;
+}
+
+.YourLuckyColoris {
+    color: #000000;
+    font-family: Jost;
+    font-weight: 600;
+    font-size: 20px;
+    opacity: 71%;
+    transform: translateX(-50%);
+}
+
+.circle-container {
+    display: flex;
+    gap: 20px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#C1 {
+    background-color: #000000;
+    transform: translateX(-25%);
+}
+
+#C2 {
+    background-color: #FFFFFF;
+    transform: translateX(+25%);
+}
