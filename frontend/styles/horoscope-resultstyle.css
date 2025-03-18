@@ -57,7 +57,7 @@ body {
     gap: 12px;
     align-items: center; /* Centers items horizontally */
     justify-content: center;
-    transform: translateY(+40px);
+    transform: translate(+18px, +40px);
 }
 
 .popupYourLuckynumberis {
@@ -75,6 +75,7 @@ body {
 #popupcooldowntimer {
     color:#FFF2D8;
     font-size: 20px;
+    transform: translate(-35px, +60px);
 }
 
 .wrapper {
