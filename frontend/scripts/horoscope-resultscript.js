@@ -29,7 +29,10 @@ async function renderFortune() {
         const { fortune } = await response.json();
         console.log(fortune);
         // TODO: display fortune on horoscope-result.hmtl
-
+        document.querySelector('.popupLuckynumber').innerText = fortune.number;
+        document.querySelector('.TheLuckynumber').innerText = fortune.number;
+        document.getElementById('C1').style.backgroundColor = fortune.color.colorFortune;
+        document.getElementById('C2').style.backgroundColor = fortune.color.colorUnFortune;
 
     } catch (error) {
         console.error("Error getting fortune:", error);
