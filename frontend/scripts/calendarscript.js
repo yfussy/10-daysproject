@@ -201,14 +201,14 @@ calendarButtons.forEach(button => {
     });
 });
 
-async function getCalendarByMonth(month) { // month: YYYY-MM
+async function getEventsByMonth(month) { // month: YYYY-MM
     if (!token) {
         alert("You must be logged in!");
         return;
     }
 
     try {
-        const response = await fetch(`${backURL}/api/clocklogs/month/:${month}`, {
+        const response = await fetch(`${backURL}/api/clocklogs/event/:${month}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -217,7 +217,7 @@ async function getCalendarByMonth(month) { // month: YYYY-MM
         });
 
         const data = response.json();
-        return data; // [{date, sleepTime, sleepDuration, wakeTime, travelDuration, appointmentTime},{},{},...]
+        return data; // [{title, location, duration: {startTime, endTime}, note},{},{},...]
     } catch (error) {
         console.error("Error getting clocklog:", error);
         alert('Something went wrong! Check the console.');
