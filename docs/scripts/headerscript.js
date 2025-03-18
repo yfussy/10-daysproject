@@ -38,6 +38,7 @@ document.querySelector('#header-profile').addEventListener('click', () => {
     const token = localStorage.getItem('token');
 
         if (!token) {
+            alert('You must be logged in!');
             window.location.href = "login.html";
         } else {
             window.location.href = "myaccountpage.html";
