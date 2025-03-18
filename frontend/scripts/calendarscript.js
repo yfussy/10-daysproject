@@ -171,6 +171,14 @@ calendarButtons.forEach(button => {
         endTimeContainer.appendChild(colon2);
         endTimeContainer.appendChild(endMinutes);
 
+        const textNote = document.createElement("input");
+        textNote.id = "note-text";
+        textNote.placeholder = "Notes";
+
+        const AddEventbtn = document.createElement("button");
+        AddEventbtn.classList.add("addeventbtn");
+        AddEventbtn.textContent =  "ADD EVENT";
+
         popupContent.appendChild(date);
         popupContent.appendChild(closeButton);
         popupContent.appendChild(textTitle);
@@ -180,11 +188,12 @@ calendarButtons.forEach(button => {
         popupContent.appendChild(startTimeContainer);
         popupContent.appendChild(en);
         popupContent.appendChild(endTimeContainer);
+        popupContent.appendChild(textNote);
+        popupContent.appendChild(AddEventbtn);
 
         rectangle.appendChild(popupContent);
         document.body.appendChild(rectangle);
         rectangle.classList.add("show");
-
         closeButton.addEventListener("click", () => {
             rectangle.remove();
             wrapper.classList.remove("transparent");

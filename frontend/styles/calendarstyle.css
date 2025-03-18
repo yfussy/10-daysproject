@@ -260,3 +260,27 @@ body {
     top: 55.8%;
     left: 70.5%;
 }
+#note-text{
+    font-family: Jost;
+    font-size: 24px;
+    color:#929292;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    left: 7%;
+    top: 75%;
+    text-decoration: underline black;
+    text-underline-position: above;
+}
+.addeventbtn{
+    border-radius: 20px;
+    padding: 1% 5% 1% 5%;
+    background-color: #AC3030;
+    font-family: Jost;
+    color: #FFF2D8;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    margin-top: 85%;
+}
