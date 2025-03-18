@@ -194,6 +194,23 @@ calendarButtons.forEach(button => {
         rectangle.appendChild(popupContent);
         document.body.appendChild(rectangle);
         rectangle.classList.add("show");
+        AddEventbtn.addEventListener("click",() => {
+            const title = textTitle.value;
+            const location = textLo.value;
+            const notes = textNote.value;
+            const startHour = startHours.value;
+            const startMinute = startMinutes.value;
+            const startTime = `${startHour}:${startMinute}`;
+            const endHour = endHours.value;
+            const endMinute = endMinutes.value;
+            const endTime = `${endHour}:${endMinute}`;
+            const selectedDate = button.textContent; 
+            const eventDate = `${year}-${month + 1}-${selectedDate.padStart(2, "0")}`; // Format as YYYY-MM-DD
+
+            saveEvent({title, location, startTime, endTime, notes}, eventDate);
+            rectangle.remove();
+            wrapper.classList.remove("transparent");
+        });
         closeButton.addEventListener("click", () => {
             rectangle.remove();
             wrapper.classList.remove("transparent");
