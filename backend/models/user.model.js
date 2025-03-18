@@ -44,10 +44,6 @@ const ClockLogSchema = mongoose.Schema(
             }
         },
         event: {
-            type: {
-                type: String,
-                default: null
-            },
             title: {
                 type: String,
                 default: null
