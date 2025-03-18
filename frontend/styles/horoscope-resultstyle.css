@@ -230,11 +230,9 @@ body {
 }
 
 #C1 {
-    background-color: #000000;
     transform: translateX(-25%);
 }
 
 #C2 {
-    background-color: #FFFFFF;
     transform: translateX(+25%);
 }
