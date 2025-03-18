@@ -3,6 +3,7 @@ const monthYearDisplay = document.getElementById("month-year");
 const body = document.querySelector("body");  
 const wrapper = document.querySelector(".wrapper");
 
+const token = localStorage.getItem('token');
 const date = new Date();
 const year = date.getFullYear();
 const month = date.getMonth();
@@ -190,3 +191,50 @@ calendarButtons.forEach(button => {
         });
     });
 });
+
+async function getCalendarByMonth(month) { // month: YYYY-MM
+    if (!token) {
+        alert("You must be logged in!");
+        return;
+    }
+
+    try {
+        const response = await fetch(`${backURL}/api/clocklogs/month/:${month}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        const data = response.json();
+        return data; // [{date, sleepTime, sleepDuration, wakeTime, travelDuration, appointmentTime},{},{},...]
+    } catch (error) {
+        console.error("Error getting clocklog:", error);
+        alert('Something went wrong! Check the console.');
+    }
+}
+
+async function saveEvent(event, date) { // event: {title, location, duration: {startTime, endTime}, note}, date: YYYY-MM-DD
+    if (!token) {
+        alert("You must be logged in!");
+        return;
+    }
+
+    try {
+        const response = await fetch(`${backURL}/api/clocklogs/event/:${date}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: event
+        });
+
+        const data = response.json();
+        return data.event; // {title, location, duration: {startTime, endTime}, note}
+    } catch (error) {
+        console.error("Error getting clocklog:", error);
+        alert('Something went wrong! Check the console.');
+    } 
+}
