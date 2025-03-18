@@ -1,6 +1,6 @@
 .Myaccount-style {
     position: absolute; 
-    top: 22%;
+    top: 24%;
     left: 45%;
     padding: 1%;
     font-family: 'Encode Sans SC', sans-serif; 
@@ -100,7 +100,7 @@
   height: 66px;
   border-radius: 20px;
   border: none;
-  position: relative;
-  left: 700px;
-  top: 550px;
+  position: absolute;
+  left: 45%;
+  top: 70%;
  }
