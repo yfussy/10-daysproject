@@ -34,7 +34,12 @@ for (let i = firstDay; i < 7; i++) {
 
     let dateSpan = document.createElement("span");
     dateSpan.textContent = dayCount;
+    dateSpan.classList.add("date-span");
     button.appendChild(dateSpan);
+
+    let event = document.createElement("span");
+    // TODO: Add event content
+    button.appendChild(event);
 
     button.addEventListener("click", () => {
         wrapper.classList.add("transparent");
@@ -57,8 +62,13 @@ while (dayCount <= daysInMonth) {
 
         if (dayCount <= daysInMonth) {
             let dateSpan = document.createElement("span");
+            dateSpan.classList.add("date-span");
             dateSpan.textContent = dayCount;
             button.appendChild(dateSpan);
+
+            let event = document.createElement("span");
+            // TODO: Add event content
+            button.appendChild(event);
 
             button.addEventListener("click", () => {
                 wrapper.classList.add("transparent"); 

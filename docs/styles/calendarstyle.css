@@ -70,11 +70,12 @@ body {
     cursor: pointer;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.calendar-btn span {
+.date-span {
     position: absolute;
     top: 7%;
     right: 7%;
