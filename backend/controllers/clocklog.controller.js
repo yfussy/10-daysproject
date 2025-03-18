@@ -6,7 +6,7 @@ const { generateFortune, deltaTime} = require('./utils.js');
 const addSleepLogByDate = async (req, res) => {
     const { sleepDuration, travelDuration, appointmentTime } = req.body;
     const userId = req.user.id;
-    const date = req.params;
+    const { date } = req.params;
 
     const wakeTime = deltaTime(appointmentTime, -travelDuration);
     const sleepTime = deltaTime(wakeTime, - sleepDuration);
@@ -159,7 +159,7 @@ const addEventByDate = async (req, res) => {
         note
     };
     const userId = req.user.id;
-    const date = req.params;
+    const { date } = req.params;
 
     try {
         const user = await User.findById(userId);
