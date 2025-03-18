@@ -197,7 +197,7 @@ calendarButtons.forEach(button => {
         AddEventbtn.addEventListener("click",() => {
             const title = textTitle.value || null;
             const location = textLo.value || null;
-            const notes = textNote.value || null;
+            const note = textNote.value || null;
             const startHour = startHours.value;
             const startMinute = startMinutes.value;
             const start = `${startHour}:${startMinute}`;
@@ -207,7 +207,7 @@ calendarButtons.forEach(button => {
             const selectedDate = button.textContent; 
             const eventDate = `${year}-${(month + 1).toString().padStart(2, "0")}-${selectedDate.padStart(2, "0")}`; // Format as YYYY-MM-DD
 
-            const eventData = JSON.stringify({title, location, duration: {start, end}, notes})
+            const eventData = JSON.stringify({title, location, duration: {start, end}, note})
             saveEvent(eventData, eventDate);
             rectangle.remove();
             wrapper.classList.remove("transparent");
