@@ -33,9 +33,3 @@ document.getElementById("login-form").addEventListener("submit", async function(
 document.getElementById("createanAccountbutton").addEventListener("click", () => {
     window.location.href = "register.html";
 });
-
-document.querySelectorAll(".header-button").forEach(button => {
-    button.addEventListener("click", () => {
-        alert("Please Log in First!")
-    });
-});
