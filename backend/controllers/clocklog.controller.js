@@ -149,22 +149,6 @@ const getFortuneStatus = async (req, res) => {
      }
 }
 
-// GET /api/clocklogs/event/:month
-const getEventsByMonth = async (req, res) => {
-    const userId = req.user.id;
-    const { month } = req.params;
-
-    try {
-        const user = await User.findById(userId);
-        const logs = user.clockLogs.filter(log => log.date.startsWith(month));
-        const events = logs.map(log => log.event);
-
-        res.status(200).json(events);
-    } catch (error) {
-        res.status(500).json({message: error.message});
-    }
-};
-
 // PUT /api/clocklogs/event/:date
 const addEventByDate = async (req, res) => {
     const { title, location, duration, note } = req.body;
@@ -200,6 +184,37 @@ const addEventByDate = async (req, res) => {
     }
 };
 
+// GET /api/clocklogs/event/date/:date
+const getEventByDate = async (req, res) => {
+    const userId = req.user.id;
+    const { date } = req.params;
+
+    try {
+        const user = await User.findById(userId);
+        const log = user.clockLogs.find(log => log.date === date);
+
+        res.status(200).json(log.event);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+// GET /api/clocklogs/event/month/:month
+const getEventsByMonth = async (req, res) => {
+    const userId = req.user.id;
+    const { month } = req.params;
+
+    try {
+        const user = await User.findById(userId);
+        const logs = user.clockLogs.filter(log => log.date.startsWith(month));
+        const events = logs.map(log => log.event);
+
+        res.status(200).json(events);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+};
+
 module.exports = {
     addSleepLogByDate,
     getClockLogByDate,
@@ -207,5 +222,7 @@ module.exports = {
     getFortune,
     generateOrUpdateFortuneForToday,
     getFortuneStatus,
-    addEventByDate
+    addEventByDate,
+    getEventByDate,
+    getEventsByMonth
 }
