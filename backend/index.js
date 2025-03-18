@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const app = express();
 const allowedOrigins = [
-    "https://yfussy.github.io/10-daysproject/",
+    "https://yfussy.github.io",
     "http://127.0.0.1:5500"
 ]
 const PORT = process.env.PORT || 3000;
