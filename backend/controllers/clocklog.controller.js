@@ -149,6 +149,22 @@ const getFortuneStatus = async (req, res) => {
      }
 }
 
+// GET /api/clocklogs/event/:month
+const getEventsByMonth = async (req, res) => {
+    const userId = req.user.id;
+    const { month } = req.params;
+
+    try {
+        const user = await User.findById(userId);
+        const logs = user.clockLogs.filter(log => log.date.startsWith(month));
+        const events = logs.map(log => log.event);
+
+        res.status(200).json(events);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+};
+
 // PUT /api/clocklogs/event/:date
 const addEventByDate = async (req, res) => {
     const { title, location, duration, note } = req.body;

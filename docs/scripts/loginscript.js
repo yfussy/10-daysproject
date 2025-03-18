@@ -20,7 +20,7 @@ document.getElementById("login-form").addEventListener("submit", async function(
         if (response.ok) {
             localStorage.setItem('token', data.token);
             alert("Login successful!");
-            window.location.href = "homepage.html";
+            window.location.href = "index.html";
         } else {
             alert(data.message);
         }
@@ -32,10 +32,4 @@ document.getElementById("login-form").addEventListener("submit", async function(
 
 document.getElementById("createanAccountbutton").addEventListener("click", () => {
     window.location.href = "register.html";
-});
-
-document.querySelectorAll(".header-button").forEach(button => {
-    button.addEventListener("click", () => {
-        alert("Please Log in First!")
-    });
 });
