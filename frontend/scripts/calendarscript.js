@@ -91,10 +91,10 @@ calendarButtons.forEach(button => {
 
         const date = document.createElement("div");
         date.classList.add("date-style");
-        
-        const clickedDate = button.textContent;  
-        date.textContent = `${clickedDate} ${shtmonthNames[dm.getMonth()]} `;
-        
+
+        const clickedDate = button.textContent;
+        date.textContent = `${clickedDate} ${shtmonthNames[dm.getMonth()]}`;
+
         const closeButton = document.createElement("button");
         closeButton.classList.add("close-btn");
         closeButton.textContent = "X";
@@ -115,9 +115,60 @@ calendarButtons.forEach(button => {
         st.classList.add("st-style");
         st.textContent = "Start";
 
+        const startTimeContainer = document.createElement("div");
+        startTimeContainer.classList.add("time-picker");
+
+        const startHours = document.createElement("input");
+        startHours.type = "number";
+        startHours.min = "0";
+        startHours.max = "23";
+        startHours.value = "09"; 
+        startHours.classList.add("sthr-input");
+
+        const startMinutes = document.createElement("input");
+        startMinutes.type = "number";
+        startMinutes.min = "0";
+        startMinutes.max = "59";
+        startMinutes.value = "00"; 
+        startMinutes.classList.add("stmin-input");
+
+        const colon = document.createElement("span");
+        colon.classList.add("stcolon");
+        colon.textContent = ":";
+
+        startTimeContainer.appendChild(startHours);
+        startTimeContainer.appendChild(colon);
+        startTimeContainer.appendChild(startMinutes);
+
         const en = document.createElement("div");
         en.classList.add("en-style");
         en.textContent = "End";
+
+        
+        const endTimeContainer = document.createElement("div");
+        endTimeContainer.classList.add("time-picker");
+
+        const endHours = document.createElement("input");
+        endHours.type = "number";
+        endHours.min = "0";
+        endHours.max = "23";
+        endHours.value = "10"; 
+        endHours.classList.add("enhr-input");
+
+        const endMinutes = document.createElement("input");
+        endMinutes.type = "number";
+        endMinutes.min = "0";
+        endMinutes.max = "59";
+        endMinutes.value = "00"; 
+        endMinutes.classList.add("enmin-input");
+
+        const colon2 = document.createElement("span");
+        colon2.classList.add("encolon");
+        colon2.textContent = ":";
+
+        endTimeContainer.appendChild(endHours);
+        endTimeContainer.appendChild(colon2);
+        endTimeContainer.appendChild(endMinutes);
 
         popupContent.appendChild(date);
         popupContent.appendChild(closeButton);
@@ -125,14 +176,16 @@ calendarButtons.forEach(button => {
         popupContent.appendChild(textLo);
         popupContent.appendChild(alldaybtn);
         popupContent.appendChild(st);
+        popupContent.appendChild(startTimeContainer);
         popupContent.appendChild(en);
+        popupContent.appendChild(endTimeContainer);
 
         rectangle.appendChild(popupContent);
         document.body.appendChild(rectangle);
         rectangle.classList.add("show");
 
         closeButton.addEventListener("click", () => {
-            rectangle.remove(); 
+            rectangle.remove();
             wrapper.classList.remove("transparent");
         });
     });

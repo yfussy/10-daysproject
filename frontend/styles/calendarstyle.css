@@ -114,6 +114,7 @@ body {
     opacity: 1;
     visibility: visible;
 }
+
 #popup-content{
     margin: 1%;
     align-items: center;
@@ -198,4 +199,64 @@ body {
     position: absolute;
     top: 15px;
     left: 5%;
+}
+
+.sthr-input{
+    position: absolute;
+    top: 59%;
+    left: 18%;
+    background-color: #AC3030;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.stmin-input{
+    position: absolute;
+    top: 59%;
+    left: 30%;
+    background-color: #AC3030;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.stcolon{
+    font-family: Jost;
+    font-size: 40px;
+    color:black;
+    position: absolute;
+    top: 55.8%;
+    left: 27.5%;
+}
+
+
+.enhr-input{
+    position: absolute;
+    top: 59%;
+    left: 61%;
+    background-color: #AC3030;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.enmin-input{
+    position: absolute;
+    top: 59%;
+    left: 73%;
+    background-color: #AC3030;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.encolon{
+    font-family: Jost;
+    font-size: 40px;
+    color:black;
+    position: absolute;
+    top: 55.8%;
+    left: 70.5%;
 }
