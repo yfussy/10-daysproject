@@ -195,19 +195,20 @@ calendarButtons.forEach(button => {
         document.body.appendChild(rectangle);
         rectangle.classList.add("show");
         AddEventbtn.addEventListener("click",() => {
-            const title = textTitle.value;
-            const location = textLo.value;
-            const notes = textNote.value;
+            const title = textTitle.value || null;
+            const location = textLo.value || null;
+            const notes = textNote.value || null;
             const startHour = startHours.value;
             const startMinute = startMinutes.value;
-            const startTime = `${startHour}:${startMinute}`;
+            const start = `${startHour}:${startMinute}`;
             const endHour = endHours.value;
             const endMinute = endMinutes.value;
-            const endTime = `${endHour}:${endMinute}`;
+            const end = `${endHour}:${endMinute}`;
             const selectedDate = button.textContent; 
-            const eventDate = `${year}-${month + 1}-${selectedDate.padStart(2, "0")}`; // Format as YYYY-MM-DD
+            const eventDate = `${year}-${(month + 1).toString().padStart(2, "0")}-${selectedDate.padStart(2, "0")}`; // Format as YYYY-MM-DD
 
-            saveEvent({title, location, startTime, endTime, notes}, eventDate);
+            const eventData = JSON.stringify({title, location, duration: {start, end}, notes})
+            saveEvent(eventData, eventDate);
             rectangle.remove();
             wrapper.classList.remove("transparent");
         });
@@ -225,7 +226,7 @@ async function getEventsByMonth(month) { // month: YYYY-MM
     }
 
     try {
-        const response = await fetch(`${backURL}/api/clocklogs/event/:${month}`, {
+        const response = await fetch(`${backURL}/api/clocklogs/event/month/${month}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -233,32 +234,32 @@ async function getEventsByMonth(month) { // month: YYYY-MM
             }
         });
 
-        const data = response.json();
-        return data; // [{title, location, duration: {startTime, endTime}, note},{},{},...]
+        const events = await response.json();
+        return events; // [{title, location, duration: {start, end}, note},{},{},...]
     } catch (error) {
         console.error("Error getting clocklog:", error);
         alert('Something went wrong! Check the console.');
     }
 }
 
-async function saveEvent(event, date) { // event: {title, location, duration: {startTime, endTime}, note}, date: YYYY-MM-DD
+async function saveEvent(eventData, date) { // event: {title, location, duration: {start, end}, note}, date: YYYY-MM-DD
     if (!token) {
         alert("You must be logged in!");
         return;
     }
 
     try {
-        const response = await fetch(`${backURL}/api/clocklogs/event/:${date}`, {
+        const response = await fetch(`${backURL}/api/clocklogs/event/${date}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             },
-            body: event
+            body: eventData
         });
 
-        const data = response.json();
-        return data.event; // {title, location, duration: {startTime, endTime}, note}
+        const data = await response.json();
+        return data.event; // {title, location, duration: {start, end}, note}
     } catch (error) {
         console.error("Error getting clocklog:", error);
         alert('Something went wrong! Check the console.');
