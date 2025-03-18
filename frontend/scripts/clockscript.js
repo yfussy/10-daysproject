@@ -1,3 +1,65 @@
+const token = localStorage.getItem("token");
+
+async function getClockLog(date) { // YYYY-MM-DD
+    if (!token) {
+        alert("You must be logged in!");
+        return;
+    }
+    
+    try {
+        const response = await fetch(`${backURL}/api/clocklogs/date/:${date}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        const data = response.json();
+
+        if (!response.ok) {
+            return {
+                date,
+                sleepTime: "00:00",
+                sleepDuration: 0,
+                wakeTime: "06:00",
+                travelDuration: 0,
+                appointmentTime: "08:00"
+            }
+        } else {
+            return data.clockLog;
+        }
+    } catch (error) {
+        console.error("Error getting clocklog:", error);
+        alert('Something went wrong! Check the console.');
+    }
+}
+
+async function saveClockLog(clocklog, date) { // { sleepDuration, travelDuration, appointmentTime}, YYYY-MM-DD
+    if (!token) {
+        alert("You must be logged in!");
+        return;
+    }
+    
+    try {
+        const response = await fetch(`${backURL}/api/clocklogs/clock/:${date}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: clocklog
+        });
+
+        const data = await response.json();
+        return data.clockLog; // {date, sleepTime, sleepDuration, wakeTime, travelDuration, appointmentTime}
+        
+    } catch (error) {
+        console.error("Error getting clocklog:", error);
+        alert('Something went wrong! Check the console.');
+    }
+}
+
 function displayDate() {
     const now = new Date();  // Get current date and time
     const day = now.getDate();  // Get the day (1-31)
