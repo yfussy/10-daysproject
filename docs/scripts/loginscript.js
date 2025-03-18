@@ -20,7 +20,7 @@ document.getElementById("login-form").addEventListener("submit", async function(
         if (response.ok) {
             localStorage.setItem('token', data.token);
             alert("Login successful!");
-            window.location.href = "homepage.html";
+            window.location.href = "index.html";
         } else {
             alert(data.message);
         }

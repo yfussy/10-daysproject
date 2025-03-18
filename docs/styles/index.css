@@ -1,0 +1,93 @@
+.main{
+    margin-top: 100px ;
+    padding: 50px;
+}
+.welcome-style{
+    display: flex;
+    justify-content: center;
+    font-family: Jost;
+    font-size: 40px;
+    font-weight: bold;
+}
+.shleep-style{
+    display: flex;
+    justify-content: center;
+    font-family: Jost;
+    font-size: 72px;
+    font-weight: bold;
+}
+.button {
+    display: flex;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #AC3030;
+    color: #FFF2D8;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    border-radius: 15px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600; 
+}
+.container {
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    width: 100%;
+    max-width: 1440px; 
+    margin: 0 ; 
+    padding: 5% 0 7.5% 0; 
+    flex-wrap: wrap; 
+}
+.picture{
+    display: flex;
+    position: relative;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;  
+    height: 50%;
+}
+.rectangle {
+    background-color: #FFF2D8;
+    height: 354px;
+    width: 30%; 
+    max-width: 362px; 
+    min-width: 250px; 
+    border-radius: 30px; 
+    margin-left: 2.5%;
+    margin-right: 2.5%;  
+}
+.regis-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #AC3030;
+    color: #FFF2D8;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    border-radius: 15px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;  
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 7.5%;
+}
+.text-style{
+    font: Jost;
+    font-size: 24px;
+    font-weight: bold;
+    color: #929292;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

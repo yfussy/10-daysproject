@@ -1,14 +1,8 @@
-object{
-    width: 100vw;
-    height: 100px;
-    top: 0px;
-    left: 0px;
-    border:none;
-}
 .Myaccount-style {
     position: absolute; 
-    top: 179px;
-    left: 593px;
+    top: 20%;
+    left: 40%;
+    padding: 1%;
     font-family: 'Encode Sans SC', sans-serif; 
     font-size: 64px;  
     font-weight: bold;  
@@ -16,12 +10,12 @@ object{
 
   .Myaccount-bg {
     position: absolute;
-    width: 235px; 
-    height: 241px; 
+    width: 16.3vw; 
+    height: 16.3vw; 
     background-color: #AC3030; 
     border-radius: 50%;
-    left: 175px;
-    top: 168px;
+    left: 12%;
+    top: 18.5%;
     z-index: 0;
   }
   
@@ -35,49 +29,54 @@ object{
   }
   .editprof-style{
     position: absolute;
-    left: 223px;
-    top: 420px;
+    left: 15.5%;
+    top: 50%;
     font-family: 'Jost';
     color: black;
     font-size: 28px;
     font-weight: 600;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
   }
 .Edit-pics{
     position: absolute;
     width: auto;
-    height: 53px;
-    left: 1010px;
-    top: 192px;
+    height: 5.7%;
+    left: 68%;
+    top: 23.5%;
     border: none;
+    cursor: pointer;
 }
 .username-style{
     position: absolute;
-    left: 631px;
-    top: 293px;
+    left: 41%;
+    top: 35%;
     font-family: 'Jost';
     font-size: 28px;
     font-weight: 600;
 }
 .email-style{
     position: absolute;
-    left: 631px;
-    top: 364px;
+    left: 41%;
+    top: 42%;
     font-family: 'Jost';
     font-size: 28px;
     font-weight: 600;
 }
 .History-pics{
     position: absolute;
-    left: 87px;
-    top: 546px;
+    left: 6%;
+    top: 66%;
     width: 59px;
     height:59px;
     border: none;
 }
 .History-style{
     position: absolute;
-    left: 167px;
-    top: 533px;
+    left: 12%;
+    top: 64%;
     font-family: 'Encode Sans SC';
     font-size: 64px;
     font-weight: bold;
