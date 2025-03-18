@@ -75,11 +75,9 @@ input[type=text], input[type=password] {
   color: #929292;
 }
 #usernameBox {
-    /* margin-left: 61px; */
     margin-top: 30px;
 }
 #passwordBox {
-    /* margin-left: 61px; */
     margin-top: 25px;
 }
 .forgotPassword-button {
