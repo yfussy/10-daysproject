@@ -19,7 +19,8 @@ Try follow these conventional commit format:
 - `perf` : special `refactor` commit, that improve performance
 - `style` : white-space, formatiing, missing indent/semi-colon etc.
 - `docs` : Documentation commits
-- `chore` : Miscellaneous commits (e.g. modifying `.gitignore`) 
+- `chore` : Miscellaneous commits (e.g. modifying `.gitignore`)
+- `(scope)`: Scope of the commit (optional)
 
 ## Git Workflow
 
@@ -30,7 +31,10 @@ Main branch is only for **production-ready code**. Each **feature** or **fix** s
 Keep your local repo stay in sync with remote repo whenever you make changes related to `main` branch
 
 #### Pull the Latest `main` Branch
-<pre>git pull origin main </pre>
+```
+git checkout main
+git pull origin main
+```
 
 ### Branch
 
@@ -44,20 +48,23 @@ Try using this naming convention
 
 #### Create Branch
 Only create branch from `main` branch for less complexity
-<pre>git checkout main
-git pull origin main
-git checkout -b 'branch_name'</pre>
-<sup>`git pull origin main` to make sure `main` is in sync</sup>
+```
+git checkout -b 'branch_name'
+```
+<sup>`git checkout main` & `git pull origin main` to make sure `main` is in sync</sup>
 
 #### Keep Branch in Sync
 While working on a branch, pull main (merge) to your branch so it is in sync with current `main`, in case there is a change in `main`.
-<pre>git merge main</pre>
+1. In GitHub Desktop, select branch `main` -> `fetch origin` -> `pull origin`
+2. Checkout to your branch (select your branch instead of `main`)
+3. `branch>Update from main`
+4. If a conflict occurs, resolve the conflict (guide below)
 
 #### Merge Conflicts
 Merge Conflict can occur on both **merging** and **pulling**. When there are changes that `main` and `branch` doesn't match and git doesn't know which line to keep, it throws a **Merge Conflict**
 
 ##### <ins>How to resolve</ins>
-* check on file(s) that conflicts
+* check on file(s) that conflict (`Open in VS Code` in GitHub Desktop)
 <pre><<<<<<< HEAD
 //Your changes (current branch)
 console.log('Hello from my branch');
@@ -68,11 +75,13 @@ console.log('Hello from main branch');
 * choose one side to keep (or combine them if necessary)
 * delete the conflict marker (<<<<, ====, >>>>)
 <pre>console.log('Resolved Merge Conflict..')</pre>
-* `git commit -m "Resolved conflicts"` to commit resolved conflicts
+* saves all your conflict files then continue merge in GitHub Desktop
 
 #### Push your branch
 Push your branch to `main` regularly, so that other members can see your changes and reduce merge conflict occuring
-<pre>git push origin 'branch name'</pre>
+```
+git push origin 'branch name'
+```
 
 ### PR Process
 
