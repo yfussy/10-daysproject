@@ -1,7 +1,7 @@
 .Myaccount-style {
     position: absolute; 
-    top: 20%;
-    left: 40%;
+    top: 22%;
+    left: 45%;
     padding: 1%;
     font-family: 'Encode Sans SC', sans-serif; 
     font-size: 64px;  
@@ -14,8 +14,8 @@
     height: 16.3vw; 
     background-color: #AC3030; 
     border-radius: 50%;
-    left: 12%;
-    top: 18.5%;
+    left: 20%;
+    top: 25.5%;
     z-index: 0;
   }
   
@@ -51,16 +51,16 @@
 }
 .username-style{
     position: absolute;
-    left: 41%;
-    top: 35%;
+    left: 50%;
+    top: 37%;
     font-family: 'Jost';
     font-size: 28px;
     font-weight: 600;
 }
 .email-style{
     position: absolute;
-    left: 41%;
-    top: 42%;
+    left: 50%;
+    top: 44%;
     font-family: 'Jost';
     font-size: 28px;
     font-weight: 600;
@@ -90,3 +90,17 @@
     background: #FFF2D8; 
     border-radius: 20px
 } */
+ .logout {
+  font-family: Jost;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff2d8;
+  background-color: #AC3030;
+  width: 130px;
+  height: 66px;
+  border-radius: 20px;
+  border: none;
+  position: relative;
+  left: 700px;
+  top: 550px;
+ }
