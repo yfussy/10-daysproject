@@ -6,10 +6,21 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+const allowedOrigins = [
+    "https://yfussy.github.io/10-daysproject/",
+    "http://127.0.0.1:5500"
+]
+const PORT = process.env.PORT || 3000;
 
 // CORS config
 app.use(cors({
-    origin: 'http://127.0.0.1:5500', // replace with github url after deploy
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+          callback(null, true);
+        } else {
+          callback(new Error('Not allowed by CORS'));
+        }
+    },
     methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -31,7 +42,7 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     console.log("Connected to database!");
     app.listen(3000, () => {
-        console.log('Server is running on Render');
+        console.log(`Server is running on port ${PORT}`);
     });
 }).catch(() => {
     console.log("Connection failed...");
