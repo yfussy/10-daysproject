@@ -101,6 +101,7 @@ calendarButtons.forEach(button => {
         closeButton.textContent = "X";
 
         const textTitle = document.createElement("input");
+        textTitle.type = "text"
         textTitle.id = "title-text";
         textTitle.placeholder = "Title";
 
