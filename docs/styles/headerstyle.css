@@ -14,25 +14,103 @@ a {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100px;
     background-color: #FFF2D8;
-    padding: 15px;
+    /* padding: 15px; */
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Equal columns */
-    justify-items: center; /* Center align the items */
-    color: white;
-    z-index: 1000;
+    grid-template-columns: repeat(5, 1fr);
+     /* Equal columns */
+    justify-items: center; 
+    /* Center align the items */
+    align-items: center;
+    /*color: black; */
+    /* color: white; */
+    /* z-index: 1000; */
 }
 .header-button {
-    background-color: #FFF2D8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
     color: black;
     border: none;
-    padding: 5px 5px;
     cursor: pointer;
     font-size: 24px;
     border-radius: 12px;
     font-family: 'Jost', sans-serif;
     font-weight: 600;
 }
+
+#header-shleep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    border: none;
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+    padding-left: 50px;
+    font-size: 24px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    position: relative;
+    left: 40px;
+}
+/* .header-calendar {
+    background-color: rgba(255, 255, 255, 0); */
+    /* background-color: blue; */
+    /* color: black;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    position: relative;
+    left: 30px;
+    bottom: 0px;
+}
+.header-clock {
+    background-color: rgba(255, 255, 255, 0); */
+    /* background-color: blue; */
+    /* color: black;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    position: relative;
+    right: 40px;
+}
+.header-horoscope{
+    background-color: rgba(255, 255, 255, 0); */
+    /* background-color: blue; */
+    /* color: black;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    position: relative;
+    right: 20%;
+}*/
+.header-profile {
+    background-color: rgba(255, 255, 255, 0);
+    /* background-color: blue; */
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    position: relative;
+    left: 50%;
+ } 
+
 .header-button:hover {
     color: #AC3030;
     font-size: 28px;
@@ -42,5 +120,9 @@ a {
     height: auto;
     max-width: 100%;
     display: block;
+}
+.shleep {
+    width: 100px;
+    padding-right: 20px;
 }
 
