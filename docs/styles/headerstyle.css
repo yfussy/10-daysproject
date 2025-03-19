@@ -41,7 +41,7 @@ a {
     font-weight: 600;
 }
 
-.header-shleep {
+#header-shleep {
     display: flex;
     justify-content: center;
     align-items: center;
