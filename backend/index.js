@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const userRoute = require('./routes/user.route.js');
 const clockRoute = require('./routes/clocklog.route.js');
+const horoscopeRoute = require('./routes/horoscope.route.js');
 const cors = require('cors');
 require('dotenv').config();
 
@@ -32,6 +33,7 @@ app.use(express.urlencoded({extended: false}));
 // routes
 app.use('/api/users', userRoute);
 app.use('/api/clocklogs', clockRoute);
+app.use('/api/horoscopes', horoscopeRoute);
 
 
 app.get('/', (req, res) => {
