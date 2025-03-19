@@ -9,17 +9,40 @@ body{
 .date{
     display: inline-flex;
     gap: 15px;
+    margin: 135px 0px 0px 100px;
+    font-size: 20px;
+
 }
 
 .date-box-container{
     display: inline-flex;
     gap: 10px;
+    margin-top: 15px;
 }
+
+.date-box-container input::placeholder {
+    color: #FFF2D8; 
+    opacity: 1; 
+}
+
 .date-box{
-    width: 95px;
-    height: 40px;
+    width: 100px;
+    height: 45px;
     background: #AC3030;
+    border: none;
     color: #FFF2D8;
+    font-size: 25px;
+    font-style: bold;
+    text-align: center; 
+    line-height: 45px;
+}
+
+#set-date{
+    position: relative;
+    top: 15px;
+    left: 10px;
+    width: 35px;
+    height: 20px;
 }
 
 #big-rect{
@@ -27,26 +50,379 @@ body{
     height: 730px; 
     background: #FFF2D8; 
     border-radius: 30px;
+    margin-top: 35px;
+    margin-left: 50px;
+    overflow-y: scroll;
+    position: relative;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 200;
+    color: #AC3030;
+}
+.text {
+    padding-left: 40px;
 }
 
+
+.right-side{
+    /* border: 2px solid black; */
+    width: 725px;
+    height: 10px;
+    position: relative;
+    left: 700px;
+    bottom: 730px;
+    display: grid;
+    justify-content: center;
+
+}
+
+.time-container{
+    display: grid;
+    gap: 10px;
+    justify-content: center;  /* Centers horizontally */
+    /* align-items: center;      Centers vertically */
+    position: relative;
+    /* border: 2px solid black; */
+    width: 500px;
+    height: 400px;
+    /* left: 75px; */
+    bottom: -5px;
+}
+
+
 .time{
-    display: inline-flex;
-    gap: 90px;
-    margin: 70px;
+    display: flex;
+    justify-content: left;  /* Centers horizontally */
+    gap: 0px;
+    /* margin-top: 70px; */
+    font-size: 18px;
+    font-style: normal;
+    /* width: 300px; */
+    /* position: relative; */
+    /* left: 907px; */
+    /* bottom: 800px; */
+}
+
+#now-time{
+    position: relative;
+    left: 65.5px;
+}
+
+#wake-time{
+    position: relative;
+    left: 263.5px;
 }
 
 .circle-container{
     display: flex;
-    gap: 25px;
+    gap: 105px;
+    position: relative;
+    top: -25px
+    /* left: -55px;
+    bottom: -25px; */
 }
 
 .circle-time{
-    width: 150px;
-    height: 150px;
-    background-color: lightgreen;
+    width: 175px;
+    height: 175px;
+    background-color: #ac3030;
+    color: #FFF2D8;
     border-radius: 50%;
     display: flex;
     justify-content: center; /* Centers the text horizontally */
     align-items: center; /* Centers the text vertically */
-    font-size: 20px;
+    font-size: 30px;
 }
+
+/* #horo{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    
+    top: 60px;
+    left: 25px;
+} */
+
+label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -30px;
+    gap: 10px;
+    font-size: 13px;
+    color:#AC3030;
+}
+
+input[type="checkbox"] {
+    transform: scale(0.7);
+    vertical-align: middle; /* Vertically aligns the checkbox with the text */
+    accent-color: #AC3030;
+}
+
+/* input[type="checkbox"]:checked + label::before {
+    background-color: #ac3030; /* Green color when checked 
+} */
+
+#horo-checkbox{
+    width: 20px;
+    height: 20px;
+    background: #AC3030;
+    color: #AC3030;
+}
+
+#set-time-btn{
+    border: none;
+    background: none;
+    color: #AC3030;
+    text-decoration: underline;
+    /* font-style: italic; */
+    position: relative;
+    top: -70px;
+    font-size: 13px;
+}
+
+/* ----------- pop-up window ----------- */
+
+.time-popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 520px;
+    border-radius: 30px;
+    background-color: #AC3030;
+
+}
+.text{
+    font-family: Jost;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFF2D8;
+    margin-left: 73px;
+    width: 400px;
+}
+.A {
+    margin-top: 43px;
+}
+.B {
+    margin-top: 98px;
+}
+/* input[type=text] {
+    position: relative;
+    left: 102.5px;
+    width: 445px;
+    height: 60px;
+    border: none;
+} */
+
+#travelTimeBox {
+    position: relative;
+    left: 102.5px;
+    width: 445px;
+    height: 60px;
+    border: none;
+    font-family: Jost;
+    font-size: 25px;
+    bottom: 143px;
+}
+#pTimeBox{
+    position: relative;
+    left: 102.5px;
+    width: 445px;
+    height: 60px;
+    border: none;
+    font-family: Jost;
+    font-size: 25px;
+    bottom: 35px;
+}
+
+/* input[type="checkbox"] {
+    position: relative;
+    left: 250px;
+    width: 20px;
+    height: 20px;
+    /* appearance: none;
+    background-color: white;
+    margin: 0;
+    color: currentColor;
+    cursor: pointer;
+} */
+
+.set-default{
+    position: relative;
+    top: -25px;
+    left: 265px;
+    color: #FFF2D8;
+    font-family: Jost;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+/* .set-default input[type="checkbox"]:checked {
+    background-color: #FFF2D8; 
+} */
+
+#setTimeasDefault{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background-color: #FFF2D8;;
+
+}
+
+.done-button{
+    position: relative;
+    left: 225px;
+    top: 30px;
+    width: 200px;
+    height: 50px;
+    background-color: #FFF2D8;
+    border: none;
+    color: #AC3030;
+    font-family: Jost;
+    font-size: 14px;
+    font-weight: 150;
+    text-align: center;
+
+}
+
+/* ------------------------- */
+
+.sleep-time{
+    display: grid;
+    width: 500px;
+    gap: 25px;
+    position: relative;
+    /* left: 75px; */
+    bottom: 30px;
+
+}
+.square-container{ 
+    /* border: 2px solid black; */
+    display: inline-block;
+    gap: 50px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.square{
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    border: none;
+    background: #AC3030;
+    color: #FFF2D8;
+    font-size: 20px;
+    text-align: center; 
+    line-height: 120px;
+}
+
+.sqr-container1{
+    display: inline-flex;
+    gap: 50px;
+}
+
+.sqr-container2{
+    display: inline-flex;
+    gap: 50px;
+    position: relative;
+    top: 20px;
+}
+
+/* sleep duration window */
+.box-container{
+    width: 200px;
+    height: 200px;
+}
+
+.box{
+    position: relative;
+    left: -40px;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 266px;
+    background-color:#fff2d8;
+    border-radius: 30px;
+}
+.sleeptime-text{
+    position: relative;
+    left: 30px;
+    top: 20px;
+    font-family: Jost;
+    font-size: 24px;
+    font-weight: 604px;
+    color: black;
+    text-transform: uppercase;
+}
+#sleeptime{
+    position: relative;
+    left: 115px;
+    top: 40px;
+    font-family: Jost;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff2d8;
+    background-color: #AC3030;
+    width: 135px;
+    height: 135px;
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+
+}
+#countdowntimer{
+    position: relative;
+    left: 365px;
+    bottom: 96px;
+    font-family: Jost;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff2d8;
+    background-color: #AC3030;
+    width: 135px;
+    height: 135px;
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+
+}
+.bin{
+    position: relative;
+    bottom: 282px;
+    left: 545px;
+    border: none;
+    background-color: #ffffff00;
+}
+.bin-button{
+    width: 28px;
+    height: 28px;
+}
+.countdowntimer-text{
+    width: 200px;
+    position: relative;
+    left: 357px;
+    bottom: 118px;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 200;
+}
+/* --------------------------- */
+
+/* .sqr1-3{
+    display: inline-flex;
+} */
+
+/* .sqr4-6{
+    position: relative;
+    top: 150px;
+    right: 510px;
+} */

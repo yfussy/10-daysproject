@@ -55,3 +55,14 @@ document.querySelector('#header-calendar').addEventListener('click', () => {
             window.location.href = "calendarpage.html";
         }
 });
+
+document.querySelector('#header-clock').addEventListener('click', () => {
+    const token = localStorage.getItem('token');
+
+        if (!token) {
+            alert('You must be logged in!');
+            window.location.href = "login.html";
+        } else {
+            window.location.href = "clock.html";
+        }
+});
