@@ -55,11 +55,11 @@ const ClockLogSchema = mongoose.Schema(
             duration: {
                 start: {
                     type: String,
-                    default: "0:00"
+                    default: "09:00"
                 },
                 end: {
                     type: String,
-                    default: "23:59"
+                    default: "10:00"
                 }
             },
             note: {
