@@ -206,8 +206,17 @@ const getEventsByMonth = async (req, res) => {
 
     try {
         const user = await User.findById(userId);
-        const logs = user.clockLogs.filter(log => log.date.startsWith(month));
-        const events = logs.map(log => log.event);
+        if (!user) {
+            return res.status(404).json({message: "User not found"});
+        }
+
+        const logs = user.clockLogs.filter(
+            log => log.date.startsWith(month) && log.event
+        );
+        const events = logs.map(log => ({
+             date: log.date, 
+             event: log.event
+        }));
 
         res.status(200).json(events);
     } catch (error) {
