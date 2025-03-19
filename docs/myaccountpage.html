@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desktop Clock</title>
+    <title>MyAccount</title>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/homepagestyle.css">
+    <link rel="stylesheet" href="styles/myaccountstyle.css">
     <link rel="stylesheet" href="styles/headerstyle.css">
+    
+
 </head>
 <body>
-    <div class="header">        
-        <a href="homepage.html">
+    <div class="header"> 
+        <a href="index.html">
             <button class="header-button" id="header-shleep">SHLEEP</button>
         </a> 
-        <a href="">
+        <a href="calendarpage.html">
             <button class="header-button" id="header-calendar">CALENDAR</button>
         </a>      
-        <a href="">
+        <a href="clock.html">
             <button class="header-button" id="header-clock">CLOCK</button>
         </a>
 
@@ -26,20 +29,23 @@
             <button class="header-button" id="header-profile"><img src="images/user.png" alt="Button Image"></button>
         </a>
     </div>
-    <div class="main">
-        <div class="welcome-style">
-            welcome to
-        </div>
-        <div class="shleep-style">
-            SHLEEP
-        </div>
-        <div class="box-style">
-            <button class="button" id="calendar-button">CALENDAR</button>
-            <img src="images/calendar.png" class="pic">
-        </div>
+    <div class="Myaccount-style">
+        MyAccount
     </div>
-    
+    <div class="Myaccount-bg">
+        <img src="images/user.png" class="Myaccount-pics">
+    </div>
+    <div class="username-style">
+        USERNAME :
+    </div>
+    <div class="email-style">
+        EMAIL :
+   </div>
+   <button class="logout" id="logout-button">Log out</button>
+
+    <div class="hisback-style"></div>
     <script src="scripts/backendURL.js"></script>
+    <script src="scripts/myaccountscript.js"></script>
     <script src="scripts/headerscript.js"></script>
 </body>
 </html>

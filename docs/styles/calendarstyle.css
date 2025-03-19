@@ -1,0 +1,299 @@
+body {
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.calendar-container {
+    width: 90%;
+    margin: 5% ; 
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.month-style {
+    font-family: 'Encode Sans SC', sans-serif;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 64px;
+    font-weight: bold;
+    color: black;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    table-layout: fixed;
+}
+
+
+.calendar th {
+    width: 14.28%;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid black;
+    font-family: Inter;
+    font-size: 18px;
+    background-color: #AC3030;
+    color: #FFF2D8;
+    font-weight: 600;
+}
+.calendar {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.calendar td {
+    width: 14.28%;
+    height: 5.5vw;
+    padding:0;
+    border: 1px solid black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #FFF2D8;
+
+}
+
+.calendar-btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    font-size: inherit;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-btn span {
+    position: absolute;
+    top: 7%;
+    right: 7%;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+/* New class to apply 50% transparency to the body */
+.transparent {
+    opacity: 0.3;
+    pointer-events: none; /* Prevent interaction with elements */
+}
+
+/* Ensure header stays fully opaque */
+.header {
+    opacity: 1 !important;
+    pointer-events: auto; /* Allow interactions with header */
+    z-index: 1;
+}
+#rectangle {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin: 1%; */
+    width: 699px;
+    height: 705px;
+    background-color: #FFF2D8;
+    border:  2px solid #AC3030;
+    border-radius: 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#rectangle.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup-content{
+    margin: 1%;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn {
+    font-size: 36px;
+    font-family: Audiowide;
+    color: #7F7F7F;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+/* ::placeholder{
+    color: #929292;
+    border: none;
+} */
+
+#title-text{
+    outline: none;
+    font-family: Jost;
+    font-size: 24px;
+    color:#929292;
+    width: 520px;
+    border-left:none; border-right: none; border-top: none;
+    border-bottom: #929292 solid;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    left: 12%;
+    top: 15%;
+    /* text-decoration: underline black;
+    text-underline-position: below; */
+}
+#lo-text{
+    outline: none;
+    font-family: Jost;
+    font-size: 24px;
+    color:#929292;
+    width: 520px;
+    border-left:none; border-right: none; border-top: none;
+    border-bottom: #929292 solid;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    left: 12%;
+    top: 26%;
+    /* text-decoration: underline black;
+    text-underline-position: below; */
+}
+.allday-btn{
+    position: absolute;
+    top: 37%;
+    left: 44.5%;
+    background-color: #AC3030;
+    color: #FFF2D8;
+    border-radius: 20px;
+    border: none;
+    font-family: Jost;
+    font-size: 16px;
+    padding: 1.5%;
+}
+
+.st-style{
+    position: absolute;
+    top: 47%;
+    left: 25%;
+    color: black;
+    font-family: Jost;
+    font-size: 20px;
+}
+.en-style{
+    position: absolute;
+    top: 47%;
+    left: 70%;
+    color: black;
+    font-family: Jost;
+    font-size: 20px;
+}
+
+.date-style{
+    color: #AC3030;
+    font-family: Jost;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    left: 5%;
+}
+
+.sthr-input{
+    position: absolute;
+    top: 52%;
+    left: 18%;
+    background-color: #AC3030;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.stmin-input{
+    position: absolute;
+    top: 52%;
+    left: 30%;
+    background-color: #AC3030;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.stcolon{
+    font-family: Jost;
+    font-size: 40px;
+    color:black;
+    position: absolute;
+    top: 48.8%;
+    left: 27.5%;
+}
+
+
+.enhr-input{
+    position: absolute;
+    top: 52%;
+    left: 61%;
+    background-color: #AC3030;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.enmin-input{
+    position: absolute;
+    top: 52%;
+    left: 73%;
+    background-color: #AC3030;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.encolon{
+    font-family: Jost;
+    font-size: 40px;
+    color:black;
+    position: absolute;
+    top: 48.8%;
+    left: 70.5%;
+}
+#note-text{
+    outline: none;
+    font-family: Jost;
+    font-size: 24px;
+    color:#929292;
+    width: 520px;
+    border-left:none; border-right: none; border-bottom: none;
+    border-top: #929292 solid;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    left: 12%;
+    top: 65%;
+    /* text-decoration: underline black;
+    text-underline-position: above; */
+}
+.addeventbtn{
+    border-radius: 20px;
+    padding: 1% 5% 1% 5%;
+    background-color: #AC3030;
+    font-family: Jost;
+    color: #FFF2D8;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    margin-top: 87%;
+}

@@ -151,9 +151,8 @@ const getFortuneStatus = async (req, res) => {
 
 // PUT /api/clocklogs/event/:date
 const addEventByDate = async (req, res) => {
-    const { type, title, location, duration, note } = req.body;
+    const { title, location, duration, note } = req.body;
     const event = {
-        type,
         title,
         location,
         duration,
