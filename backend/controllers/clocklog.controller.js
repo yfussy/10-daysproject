@@ -1,4 +1,5 @@
 const User = require('../models/user.model.js');
+const { Horoscope, HoroscopeSchema } = require('../models/horoscope.model.js');
 const { generateFortune, deltaTime} = require('./utils.js');
 
 // controllers
@@ -98,9 +99,14 @@ const generateOrUpdateFortuneForToday = async (req, res) => {
 
     try {
         const user = await User.findById(userId);
+        const horoscope = await Horoscope.findOne({ id: newFortune.number });
         if (!user) {
             return res.status(404).json({ message: "User not found" });
         }
+        if (!horoscope) {
+            return res.status(404).json({ message: "Horoscope not found"});
+        }
+        newFortune.horoscope = horoscope.horoscope;
 
         const log = user.clockLogs.find(log => log.date === today);
         if (log) {

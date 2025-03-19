@@ -3,7 +3,7 @@ function randomColor() {
 }
 
 function generateFortuneNum() {
-    return Math.floor(Math.random() * 59);
+    return Math.floor(Math.random() * 10);
 }
 
 function generateFortune() {

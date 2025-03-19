@@ -111,12 +111,12 @@ body {
 }
 #rectangle {
     position: fixed;
-    top: 48%;
-    left: 49.5%;
+    top: 55%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    margin: 1%;
-    width: 39%;
-    height: 66%;
+    /* margin: 1%; */
+    width: 699px;
+    height: 705px;
     background-color: #FFF2D8;
     border:  2px solid #AC3030;
     border-radius: 25px;
@@ -148,36 +148,46 @@ body {
     right: 10px;
     z-index: 2;
 }
+/* ::placeholder{
+    color: #929292;
+    border: none;
+} */
 
 #title-text{
+    outline: none;
     font-family: Jost;
     font-size: 24px;
     color:#929292;
-    border: none;
+    width: 520px;
+    border-left:none; border-right: none; border-top: none;
+    border-bottom: #929292 solid;
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    left: 7%;
-    top: 25%;
-    text-decoration: underline black;
-    text-underline-position: below;
+    left: 12%;
+    top: 15%;
+    /* text-decoration: underline black;
+    text-underline-position: below; */
 }
 #lo-text{
+    outline: none;
     font-family: Jost;
     font-size: 24px;
     color:#929292;
-    border: none;
+    width: 520px;
+    border-left:none; border-right: none; border-top: none;
+    border-bottom: #929292 solid;
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    left: 7%;
-    top: 33%;
-    text-decoration: underline black;
-    text-underline-position: below;
+    left: 12%;
+    top: 26%;
+    /* text-decoration: underline black;
+    text-underline-position: below; */
 }
 .allday-btn{
     position: absolute;
-    top: 45%;
+    top: 37%;
     left: 44.5%;
     background-color: #AC3030;
     color: #FFF2D8;
@@ -190,7 +200,7 @@ body {
 
 .st-style{
     position: absolute;
-    top: 52%;
+    top: 47%;
     left: 25%;
     color: black;
     font-family: Jost;
@@ -198,7 +208,7 @@ body {
 }
 .en-style{
     position: absolute;
-    top: 52%;
+    top: 47%;
     left: 70%;
     color: black;
     font-family: Jost;
@@ -217,7 +227,7 @@ body {
 
 .sthr-input{
     position: absolute;
-    top: 59%;
+    top: 52%;
     left: 18%;
     background-color: #AC3030;
     font-family: Jost;
@@ -227,7 +237,7 @@ body {
 }
 .stmin-input{
     position: absolute;
-    top: 59%;
+    top: 52%;
     left: 30%;
     background-color: #AC3030;
     font-family: Jost;
@@ -240,14 +250,14 @@ body {
     font-size: 40px;
     color:black;
     position: absolute;
-    top: 55.8%;
+    top: 48.8%;
     left: 27.5%;
 }
 
 
 .enhr-input{
     position: absolute;
-    top: 59%;
+    top: 52%;
     left: 61%;
     background-color: #AC3030;
     font-family: Jost;
@@ -258,7 +268,7 @@ body {
 
 .enmin-input{
     position: absolute;
-    top: 59%;
+    top: 52%;
     left: 73%;
     background-color: #AC3030;
     font-family: Jost;
@@ -271,21 +281,24 @@ body {
     font-size: 40px;
     color:black;
     position: absolute;
-    top: 55.8%;
+    top: 48.8%;
     left: 70.5%;
 }
 #note-text{
+    outline: none;
     font-family: Jost;
     font-size: 24px;
     color:#929292;
-    border: none;
+    width: 520px;
+    border-left:none; border-right: none; border-bottom: none;
+    border-top: #929292 solid;
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    left: 7%;
-    top: 75%;
-    text-decoration: underline black;
-    text-underline-position: above;
+    left: 12%;
+    top: 65%;
+    /* text-decoration: underline black;
+    text-underline-position: above; */
 }
 .addeventbtn{
     border-radius: 20px;
@@ -296,5 +309,5 @@ body {
     font-size: 16px;
     font-weight: 600;
     border: none;
-    margin-top: 85%;
+    margin-top: 87%;
 }
