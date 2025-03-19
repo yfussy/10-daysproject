@@ -1,5 +1,10 @@
 const {Horoscope, HoroscopeSchema} = require("../models/horoscope.model.js");
 
+// GET /api/horoscopes
+const getHoroscope = async (req, res) => {
+    const allHoro = await Horoscope.find({});
+    res.status(200).json(allHoro);
+}
 // POST /api/horoscopes
 const createHoroscope = async (req, res) => {
     const { id, horoscope } = req.body;
@@ -40,5 +45,6 @@ const updateHoroscope = async (req, res) => {
 
 module.exports = {
     createHoroscope,
-    updateHoroscope
+    updateHoroscope,
+    getHoroscope
 }

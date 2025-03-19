@@ -31,6 +31,7 @@ async function renderFortune() {
         document.querySelector('.TheLuckynumber').innerText = fortune.number;
         document.getElementById('C1').style.backgroundColor = fortune.color.colorFortune;
         document.getElementById('C2').style.backgroundColor = fortune.color.colorUnFortune;
+        document.querySelector('.YourHoroscope').innerText = fortune.horoscope;
 
     } catch (error) {
         console.error("Error getting fortune:", error);

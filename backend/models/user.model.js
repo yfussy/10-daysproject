@@ -43,7 +43,10 @@ const ClockLogSchema = mongoose.Schema(
                 type: Number,
                 default: null
             },
-            horoscope: HoroscopeSchema
+            horoscope: {
+                type: String,
+                default: null
+            }
         },
         event: {
             title: {
