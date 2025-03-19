@@ -81,11 +81,14 @@ body {
     color: #333;
     text-align: left;
     width: 100%;
+    font-family: Inter;
+    font-weight: 600;
+
 }
 
 .has-event {
-    background-color: #c6f6d5 !important; /* Light green, override transparent */
-    border: 1px solid #4CAF50;
+    background-color: #F9D181 !important; /* Light green, override transparent */
+    /* border: px solid #4CAF50; */
 }
 
 .date-span {
