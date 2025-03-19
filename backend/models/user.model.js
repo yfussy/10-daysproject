@@ -1,5 +1,6 @@
 const { ReturnDocument } = require('mongodb');
 const mongoose = require('mongoose');
+const {Horoscope, HoroscopeSchema} = require('./horoscope.model.js');
 
 const ClockLogSchema = mongoose.Schema(
     {
@@ -41,7 +42,8 @@ const ClockLogSchema = mongoose.Schema(
             number: {
                 type: Number,
                 default: null
-            }
+            },
+            horoscope: HoroscopeSchema
         },
         event: {
             title: {
