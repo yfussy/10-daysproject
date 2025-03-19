@@ -25,12 +25,12 @@ const createHoroscope = async (req, res) => {
 // PUT /api/horoscopes/:number
 const updateHoroscope = async (req, res) => {
     const { number } = req.params;
-    const updates = req.body;
+    const { updates } = req.body;
 
     try {
         const updateHoroscope = await Horoscope.findOneAndUpdate(  
                 { id: number },
-                updates,
+                { horoscope: updates },
                 { new: true }
         );
 
