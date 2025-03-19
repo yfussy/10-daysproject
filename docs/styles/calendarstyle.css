@@ -70,11 +70,25 @@ body {
     cursor: pointer;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.calendar-btn span {
+.event-info {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    width: 100%;
+}
+
+.has-event {
+    background-color: #c6f6d5 !important; /* Light green, override transparent */
+    border: 1px solid #4CAF50;
+}
+
+.date-span {
     position: absolute;
     top: 7%;
     right: 7%;

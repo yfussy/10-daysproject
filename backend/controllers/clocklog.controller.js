@@ -7,7 +7,7 @@ const { generateFortune, deltaTime} = require('./utils.js');
 const addSleepLogByDate = async (req, res) => {
     const { sleepDuration, travelDuration, appointmentTime } = req.body;
     const userId = req.user.id;
-    const date = req.params;
+    const { date } = req.params;
 
     const wakeTime = deltaTime(appointmentTime, -travelDuration);
     const sleepTime = deltaTime(wakeTime, - sleepDuration);
@@ -165,7 +165,7 @@ const addEventByDate = async (req, res) => {
         note
     };
     const userId = req.user.id;
-    const date = req.params;
+    const { date } = req.params;
 
     try {
         const user = await User.findById(userId);
@@ -190,6 +190,46 @@ const addEventByDate = async (req, res) => {
     }
 };
 
+// GET /api/clocklogs/event/date/:date
+const getEventByDate = async (req, res) => {
+    const userId = req.user.id;
+    const { date } = req.params;
+
+    try {
+        const user = await User.findById(userId);
+        const log = user.clockLogs.find(log => log.date === date);
+
+        res.status(200).json(log.event);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+// GET /api/clocklogs/event/month/:month
+const getEventsByMonth = async (req, res) => {
+    const userId = req.user.id;
+    const { month } = req.params;
+
+    try {
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({message: "User not found"});
+        }
+
+        const logs = user.clockLogs.filter(
+            log => log.date.startsWith(month) && log.event
+        );
+        const events = logs.map(log => ({
+             date: log.date, 
+             event: log.event
+        }));
+
+        res.status(200).json(events);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+};
+
 module.exports = {
     addSleepLogByDate,
     getClockLogByDate,
@@ -197,5 +237,7 @@ module.exports = {
     getFortune,
     generateOrUpdateFortuneForToday,
     getFortuneStatus,
-    addEventByDate
+    addEventByDate,
+    getEventByDate,
+    getEventsByMonth
 }
