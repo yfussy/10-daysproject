@@ -22,45 +22,122 @@
         <button class="header-button" id="header-horoscope">HOROSCOPE</button>
         
         <button class="header-button" id="header-profile"><img src="images/user.png" alt="Button Image"></button>
+    </div>
+    <div class="header">        
+        <a href="index.html">
+            <button class="header-button" id="header-shleep">SHLEEP</button>
+        </a> 
 
-<button class="header-button" id="header-profile"><img src="images/user.png" alt="Button Image"></button>
+        <button class="header-button" id="header-calendar">CALENDAR</button> 
+
+        <button class="header-button" id="header-clock">CLOCK</button>
+
+        <button class="header-button" id="header-horoscope">HOROSCOPE</button>
+        
+        <button class="header-button" id="header-profile"><img src="images/user.png" alt="Button Image"></button>
     </div>
     <div class = "date">
         <h3>DATE:</h3>
         <div class="date-box-container">
-            <div class="date-box" id="day"></div>
+            <select name="day"id="day-option" class="date-box"></select>
+            <select name="month"id="month-option" class="date-box"></select>
+            <select name="year"id="year-option" class="date-box"></select>
+
+            <button id="set-date" onclick="setDate()">OK</button>
+            <!-- <div class="date-box" id="day"></div>
             <div class="date-box" id="month"></div>
-            <div class="date-box" id="year"></div>
+            <div class="date-box" id="year"></div> -->
         </div>
     </div>
-    <div id="big-rect"></div>
-        <!-- <div style="width: 650px; height: 730px; background: #FFF2D8; border-radius: 30px"></div> -->
-    <div>
-        <div class="time">
-            <div>Now</div>
-            <div>Waking Time</div>
-        </div>
-        <div class="circle-container">
-            <div class="circle-time"></div>
-            <div class="circle-time"></div>
-        </div>
-        <div id="horo-checkbox"></div>
-        <div>APPLY YOUR HOROSCOPE</div>
-        <div>CLICK HERE TO SET TRAVEL AND PREPARATION TIME</div>
-    </div>
-        <!-- <div style="width: 200px; height: 200px; background: #AC3030; border-radius: 9999px"></div> -->
-    <div class="sleep-time">
-        <div>RECOMMENDED SLEEP TIME:</div>     
-        <div class="square-container">
-            <div class="square">1.5 hours</div>
-            <div class="square">3 hours</div>
-            <div class="square">4.5 hours</div>
-            <div class="square">6 hours</div>
-            <div class="square">7.5 hours</div>
-            <div class="square">9 hours</div>
-        </div>
-    </div>
+
+    <div id="big-rect"><div class="rtext"><br><br><br>
+        <div id="00">00.00_____________________________________________</div><br><br><br>
+        <div id="01">01.00_____________________________________________</div><br><br><br>
+        <div id="02">02.00_____________________________________________</div><br><br><br>
+        <div id="03">03.00_____________________________________________</div><br><br><br>
+        <div id="04">04.00_____________________________________________</div><br><br><br>
+        <div id="05">05.00_____________________________________________</div><br><br><br>
+        <div id="06">06.00_____________________________________________</div><br><br><br>
+        <div id="07">07.00_____________________________________________</div><br><br><br>
+        <div id="08">08.00_____________________________________________</div><br><br><br>
+        <div id="09">09.00_____________________________________________</div><br><br><br>
+        <div id="10">10.00_____________________________________________</div><br><br><br>
+        <div id="11">11.00_____________________________________________</div><br><br><br>
+        <div id="12">12.00_____________________________________________</div><br><br><br>
+        <div id="13">13.00_____________________________________________</div><br><br><br>
+        <div id="14">14.00_____________________________________________</div><br><br><br>
+        <div id="15">15.00_____________________________________________</div><br><br><br>
+        <div id="16">16.00_____________________________________________</div><br><br><br>
+        <div id="17">17.00_____________________________________________</div><br><br><br>
+        <div id="18">18.00_____________________________________________</div><br><br><br>
+        <div id="19">19.00_____________________________________________</div><br><br><br>
+        <div id="20">20.00_____________________________________________</div><br><br><br>
+        <div id="21">21.00_____________________________________________</div><br><br><br>
+        <div id="22">22.00_____________________________________________</div><br><br><br>
+        <div id="23">23.00_____________________________________________</div>
+    </div></div>
     
+    <div class="right-side">
+        <div class="time-container">
+            <div class="time">
+                <div id="now-time">NOW</div>
+                <div id="wake-time">WAKING TIME</div>
+            </div>
+            <div class="circle-container">
+                <div class="circle-time" id="time-now"></div>
+                <div class="circle-time" id="time-wake"></div>
+            </div>
+            <!-- <label class="checkbox-container">
+                <input type="checkbox" id="horo-checkbox" > APPLY YOUR HOROSCOPE
+            </label> -->
+            <!-- set time -->
+            <button onclick="setTime()" id="set-time-btn">CLICK HERE TO SET TRAVEL AND PREPARATION TIME</button>
+        </div>
+
+        
+
+        <div class="sleep-time" id="sleep-time-window">
+            <div>RECOMMENDED SLEEP TIME:</div>     
+            <div class="square-container">
+                <div class="sqr-container1">
+                    <button class="square sqr1-3" id="1.5hours">1.5 hours</button>
+                    <button class="square sqr1-3" id="3hours">3 hours</button>
+                    <button class="square sqr1-3" id="4.5hours">4.5 hours</button>
+                </div>
+                <div class="sqr-container2">
+                    <button class="square sqr4-6" id="6hours">6 hours</button>
+                    <button class="square sqr4-6" id="7.5hours">7.5 hours</button>
+                    <button class="square sqr4-6" id="9hours">9 hours</button>
+                </div>
+            </div>
+        </div>  
+        
+        <!-- pop-up window -->
+        <div class="time-popup" id="time-popup">
+            <div class="text">
+                <div class="A">SET TRAVEL TIME (mins)</div><br>
+                <div class="B">SET PREPARATION TIME (mins)</div>
+            </div>
+            <input type="text" id="travelTimeBox" name="traveltime" placeholder="Enter a Number" required><br>
+            <input type="text" id="pTimeBox" name="ptime" placeholder="Enter a Number" required><br>
+            <!-- <label for="setTimeasDefault" class="set-default">
+                <input type="checkbox" id="setTimeasDefault" name="setTimeasDefault"> SET AS DEFAULT
+            </label> -->
+            <!-- <label for="setTimeasDefault" class="set-default">SET AS DEFAULT</label><br> -->
+            <button type="submit" class="done-button" id="done-btn" onclick="updateWakeTime()">DONE</button>
+        </div> 
+
+        <!-- sleep duration window -->
+        <div class="box-container">
+            <div class="box" id="sleep-new-window">
+                <div class="sleeptime-text">sleep time :</div>
+                <div id="sleeptime"></div>
+                <div id="countdowntimer"></div>
+                <button class="bin" id="bin"><img src="images/recycle-bin.png" class="bin-button"></button>
+                <div class="countdowntimer-text">Countdown Timer</div>
+            </div>
+        </div>
+    </div>
     <script src="scripts/backendURL.js"></script>
     <script src="scripts/headerscript.js"></script>
     <script src="scripts/clockscript.js"></script>
