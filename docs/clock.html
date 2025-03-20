@@ -26,9 +26,10 @@
     <div class = "date">
         <h3>DATE:</h3>
         <div class="date-box-container">
-            <input type="radio" class="date-box" id="day"  maxlength="2" placeholder="DD" oninput="moveNext(this, 'month')" required />
-            <input type="radio" class="date-box" id="month" maxlength="2" placeholder="MM" oninput="moveNext(this, 'year')" required />
-            <input type="radio" class="date-box" id="year" maxlength="4" placeholder="YYYY" required />
+            <select name="day"id="day-option" class="date-box"></select>
+            <select name="month"id="month-option" class="date-box"></select>
+            <select name="year"id="year-option" class="date-box"></select>
+
             <button id="set-date" onclick="setDate()">OK</button>
             <!-- <div class="date-box" id="day"></div>
             <div class="date-box" id="month"></div>
@@ -36,7 +37,7 @@
         </div>
     </div>
 
-    <div id="big-rect"><div class="text"><br><br><br>
+    <div id="big-rect"><div class="rtext"><br><br><br>
         <div id="00">00.00_____________________________________________</div><br><br><br>
         <div id="01">01.00_____________________________________________</div><br><br><br>
         <div id="02">02.00_____________________________________________</div><br><br><br>

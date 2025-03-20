@@ -59,7 +59,7 @@ body{
     font-weight: 200;
     color: #AC3030;
 }
-.text {
+.rtext {
     padding-left: 40px;
 }
 
@@ -341,7 +341,7 @@ input[type="checkbox"] {
 .box{
     position: relative;
     left: -40px;
-    top: 0px;
+    top: -0px;
     margin-left: auto;
     margin-right: auto;
     width: 600px;
